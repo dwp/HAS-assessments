@@ -1,44 +1,516 @@
 
-{% extends "layout.html" %}
+<!DOCTYPE html>
+<html lang="en" class="govuk-template ">
+  <head>
+    <meta charset="utf-8">
+    <title>
+  Referral list
+</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0b0c0c">
 
-{% block pageTitle %}
-  Home – GOV.UK Prototype Kit
-{% endblock %}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-{% block content %}
+
+      <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/govuk/assets/images/favicon.ico" type="image/x-icon">
+      <link rel="mask-icon" href="/govuk/assets/images/govuk-mask-icon.svg" color="#0b0c0c">
+      <link rel="apple-touch-icon" sizes="180x180" href="/govuk/assets/images/govuk-apple-touch-icon-180x180.png">
+      <link rel="apple-touch-icon" sizes="167x167" href="/govuk/assets/images/govuk-apple-touch-icon-167x167.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/govuk/assets/images/govuk-apple-touch-icon-152x152.png">
+      <link rel="apple-touch-icon" href="/govuk/assets/images/govuk-apple-touch-icon.png">
+
+
+
+  <!--[if lte IE 8]><link href="/public/stylesheets/application-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if gt IE 8]><!--><link href="/public/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" /><!--<![endif]-->
+
+
+
+
+
+
+    <meta property="og:image" content="/govuk/assets/images/govuk-opengraph-image.png">
+  </head>
+  <body class="govuk-template__body ">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+
+
+      <a href="#main-content" class="govuk-skip-link">Skip to main content</a>
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="govuk-header dwp-header" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__logo">
+      <a href="/index" class="govuk-header__link govuk-header__link--homepage">
+          <span class="govuk-header__logotype-text">
+            Health Assessment
+          </span>
+      </a>
+    </div>
+    <!-- <div class="govuk-header__content">
+      <a href="#" class="govuk-header__link govuk-header__linkservice-name">
+        Service name
+      </a>
+    </div> -->
+  </div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="govuk-width-container ">
+
+        <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">
-        Prototype your service using GOV.UK Prototype Kit
-        <span class="govuk-caption-xl">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}
-      <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
-      </p>
+    <div class="govuk-grid-column-full">
 
-      <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
-      </p>
 
-      <h2 class="govuk-heading-m">About this page</h2>
+      {% set mainClasses = "govuk-main-wrapper--l" %}
 
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
+      {% block content %}
 
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <span class="govuk-caption-xl">Prototypes</span>
+          <h1 class="govuk-heading-l">Book, view and cancel appointments
+      </h1>
 
-      <h2 class="govuk-heading-m">Examples and documentation</h2>
+      <h2 class="govuk-heading-m">Sprint 6 - Baseline MVP
+  </h2>
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a href="/docs/tutorials-and-examples">Tutorials and templates</a>
-        </li>
-        <li>
-          <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
-        </li>
-      </ul>
+  <p>No appointments exist in service.</p>
+
+
+
+      <table class="govuk-table">
+
+
+
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+        <th class="govuk-table__header" scope="col">User journeys</th>
+        <th class="govuk-table__header" scope="col"></th>
+        <th class="govuk-table__header" scope="col">Working assumptions</th>
+        </tr>
+        </thead>
+
+
+
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><p>Book telephone assessment appointment (PIP)</p></th>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list">
+                <li><a href="pip-ta/claimant-detail">Appointment booker</a></li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list">
+                <li>All 'appointment booking' happens from the claimant details screen in HAS. How users get to that point is out of scope for now (Understand caseload status, filtering and find are being worked upon.)</li>
+                <li>If 'benefit type' is 'pulled' from one source of truth (currently PAT team entry and used by Chaffinsh) we will remove need to ask 'app booker' to add this saving time and error.</li>
+                <li>If we split the TA and F2F assessment booking into 2 flows determined by the HCP at initial review, we can share resource across sites for TAs improving efficiency and use of available trained assessors.</li>
+                <li>When an HCP reviews a case and determines if a PBR, TA or F2F we can record that as a status to ensure 'app booker' 'books' correctly trained and available HCP and decisions on assessment type are always taken by the HCP at initial review as per policy intent?</li>
+                <li>Allows appointment booker to book with claimant on the phone as all information needed is in one view.</li>
+            </ul></td>
+          </tr>
+
+
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header"><p>Book face to face assessment appointment (UC/WCA)</p></th>
+                <td class="govuk-table__cell">
+                  <ul class="govuk-list">
+                    <li><a href="uc-f2f/claimant-detail">Appointment booker</a></li>
+                  </ul>
+                </td>
+                <td class="govuk-table__cell">
+                  <ul class="govuk-list">
+                    <li>Until a 'initial review' journey is explored that may capture this, we will need to rely on the app booker checking the tracker to answer if the assessment requires an HCP qualified in complex neuro.</li>
+                </ul></td>
+              </tr>
+          </table>
+
+          <br><br><br>
+          <p>Appointments exist in service.</p>
+
+          <table class="govuk-table">
+
+
+
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">User journeys</th>
+            <th class="govuk-table__header" scope="col"></th>
+            <th class="govuk-table__header" scope="col">Working assumptions</th>
+            </tr>
+            </thead>
+
+
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><p>Assign HCPs</p></th>
+              <!-- <th scope="row" class="govuk-table__header"><p>View existing appointment/s (without HCP assigned)</p></th> -->
+              <td class="govuk-table__cell">
+                <ul class="govuk-list">
+                  <li><a href="pip-ta/claimant-detail-assign-hcp">Resource manager</a></li>
+                </ul>
+              </td>
+              <td class="govuk-table__cell">
+                <ul class="govuk-list">
+                  <li>Assumption - Resource managers can navigate to an existing screen (Chaffinich?) that shows all 'booked assessments' and from there can view and assign.</li>
+                  <li>Assumption - there is a wider need for anyone in HAS to be able to view if an assessment exists regardless of workflow status.</li>
+              </ul></td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><p>View, cancel, delete, change existing appointment/s</p></th>
+              <td class="govuk-table__cell">
+                <ul class="govuk-list">
+                  <li><a href="pip-ta/claimant-detail-start-assessment">Resource manager and anyone in HAS</a></li>
+                </ul>
+              </td>
+              <td class="govuk-table__cell">
+                <ul class="govuk-list">
+                  <li>Assumption - there is an existing process to view 'assessment booked' and 'start assessment' as a list view for resource managers. Do they need to toggle between views as per HB tab design or could they simply open 2 browser windows if needed for MVP until we understand more?</li>
+              </ul></td>
+            </tr>
+
+            <!-- <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><p>View existing appointment/s (with HCP assigned)</p></th>
+              <td class="govuk-table__cell">
+                <ul class="govuk-list">
+                  <li><a href="pip-ta/claimant-detail-start-assessment">Healthcare professionals</a></li>
+                </ul>
+              </td>
+              <td class="govuk-table__cell">
+                <ul class="govuk-list">
+                  <li>Assumption - there is an existing process to view 'assessment booked' and 'start assessment' as a list view for resource managers. Do they need to toggle between views as per HB tab design or could they simply open 2 browser windows if needed for MVP until we understand more?</li>
+              </ul></td>
+            </tr>
+
+
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><p>Change an appointment time and/or date<p/></th>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list">
+                <li><a href="">Appointment booker</a></li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list">
+                <li>Assumption - 'Appointment bookers' also receive contact (calls, emails, letters) from citizens (after they have recieved appointment confirmation) and need to change or cancel the time and/or date.</li>
+                <li>Assumption - We can make cancel and rebook a seamless task (MVP contraint - No change functionality, process is to cancel and rebook)</li>
+            </ul></td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><p>Cancel an appointment<p/></th>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list">
+                <li><a href="">Appointment booker</a></li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list">
+                <li>Assumption - Scenarios exist where an appointment is cancelled with no further actions to be taken. No rebooking needed. Is this a valid scenario? Does the whole claim including benefit cease? In that case who do we need to record or notify with and what do they need to close the claim?</li>
+            </ul></td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><p>Book a second appointment for another claim</p></th>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list">
+                <li><a href="">Appointment booker</a></li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list">
+                <li>Assumption - we need to prevent 'double booking'</li>
+                <li>Assumption - a citizen may have a PIP and WCA claim at the same time. These need to remain as 2 seperate HAS 'appointments'.</li>
+                <li>Assumption - allowing a max of 2 appointments to be booked and only if they are for different benefit lines will reduce the 'double booking' issue.</li>
+                <li>Assumption - test design where by an existing appointent is always cancelled before another is booked (start of change/amend journey above)</li>
+            </ul></td>
+          </tr> -->
+
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><p>Add request for a same sex HCP and/or interpreter</p></th>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list">
+                <li><a href="">Appointment booker</a></li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-list">
+                <li>Scenario - citizen is happy with time and date of appointment, but having recieved letter contacts HAS to request a same sex HCP and/or interpreter.</li>
+                <li>What other reasonable adjustments might need to be captured?</li>
+                <li>Assumption - Capturing this information in HAS is useful</li>
+            </ul></td>
+          </tr>
+
+
+
+        </table>
+          <br><br><br>
+          <p>Case management by status.</p>
+
+                    <table class="govuk-table">
+
+
+
+                    <thead class="govuk-table__head">
+                      <tr class="govuk-table__row">
+                      <th class="govuk-table__header" scope="col">User journeys</th>
+                      <th class="govuk-table__header" scope="col"></th>
+                      <th class="govuk-table__header" scope="col">Working assumptions</th>
+                      </tr>
+                      </thead>
+
+
+                      <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header"><p>Task 1. Book TA assessment OR book F2F assessment</p></th>
+                        <!-- <th scope="row" class="govuk-table__header"><p>View existing appointment/s (without HCP assigned)</p></th> -->
+                        <td class="govuk-table__cell">
+                          <ul class="govuk-list">
+                            <li><a href="status-led-design/book-assessment">Appointment booker</a></li>
+                          </ul>
+                        </td>
+                        <td class="govuk-table__cell">
+                          <ul class="govuk-list">
+                            <li>Assumption - updates to status to split TA and F2F allows processes to scale and be itearted on with greater flexibility and outcomes as well as supporting stats, filtering and 'app booker' follow process decided by HCP at IR.</li>
+                        </ul></td>
+                      </tr>
+
+                      <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header"><p>Task 2. Assign an HCP</p></th>
+                        <td class="govuk-table__cell">
+                          <ul class="govuk-list">
+                            <li><a href="status-led-design/assessment-booked">Appointment booker</a></li>
+
+                          </ul>
+                        </td>
+                        <td class="govuk-table__cell">
+                          <ul class="govuk-list">
+                            <li>Assumption - there is an existing process to view 'assessment booked' and 'start assessment' as a list view for resource managers. Do they need to toggle between views as per HB tab design or could they simply open 2 browser windows if needed for MVP until we understand more?</li>
+                        </ul></td>
+                      </tr>
+
+                      <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header"><p>Task 3. Monitors</p></th>
+                        <td class="govuk-table__cell">
+                          <ul class="govuk-list">
+                            <li><a href="status-led-design/start-assessment">Appointment booker</a></li>
+                          </ul>
+                        </td>
+                        <td class="govuk-table__cell">
+                          <ul class="govuk-list">
+                            <li>Assumption - App booker watches progress and status change (start assessment), no action until assessment complete or changes needed so assumption stays in caseload.</li>
+                        </ul></td>
+                      </tr>
+
+
+
+            </table>
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+        <div class="govuk-grid-column-one-third">
+          <aside class="app-related-items" role="complementary">
+            <h2 class="govuk-heading-m" id="subsection-title">
+              Related content
+            </h2>
+            <nav role="navigation" aria-labelledby="subsection-title">
+              <h3 class="govuk-heading-s">Resources</h3>
+              <ul class="govuk-list govuk-!-font-size-16">
+                <li>
+                  <a href="https://dwpdigital.atlassian.net/wiki/spaces/HPDU/pages/132782063771/TP+-+UCD" target="_blank">
+                    User insight and needs
+                  </a>
+                </li>
+                <li>
+                  <a href="https://miro.com/app/board/uXjVO4mWNdw=/" target="_blank">
+                    Personas
+                  </a>
+                </li>
+                <!-- <li>
+                  <a href="https://eaflood.atlassian.net/wiki/spaces/SFI/pages/3588849665/Vet+Visits" target="_blank">
+                    Project Confluence
+                  </a>
+                </li>
+                <li>
+                  <a href="https://defra.sharepoint.com/sites/MST-Defra-SustainableFarmingIncentive2022ProductTeam/Shared%20Documents/Forms/AllItems.aspx?viewid=c001e37e%2D0f18%2D46ce%2D96ab%2D4070d6882140&id=%2Fsites%2FMST%2DDefra%2DSustainableFarmingIncentive2022ProductTeam%2FShared%20Documents%2FAnimal%20Health%20and%20Welfare&CT=1631111182054&OR=OWA%2DNT&CID=770c6880%2Daf78%2D57d2%2D1344%2Ddb0aacf43184" target="_blank">
+                    Team Sharepoint
+                  </a>
+                </li> -->
+              </ul>
+              <h3 class="govuk-heading-s">Design assets</h3>
+              <ul class="govuk-list govuk-!-font-size-16">
+                <li>
+                  <a target=”_blank” href="https://miro.com/app/board/uXjVOua5syw=/">Miro board</a>
+                </li>
+              </ul>
+            </nav>
+          </aside>
+        </div>
+
+      </div>
+
+
+      {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
     </div>
   </div>
 
-{% endblock %}
+        </main>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="govuk-footer " role="contentinfo">
+  <div class="govuk-width-container ">
+
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+          <h2 class="govuk-visually-hidden">Support links</h2>
+
+            <ul class="govuk-footer__inline-list">
+
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="https://govuk-prototype-kit.herokuapp.com/">
+                    GOV.UK Prototype Kit v9.10.1
+                  </a>
+                </li>
+
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="/prototype-admin/clear-data">
+                    Clear data
+                  </a>
+                </li>
+
+            </ul>
+
+
+
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          class="govuk-footer__licence-logo"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 483.2 195.7"
+          height="17"
+          width="41"
+        >
+          <path
+            fill="currentColor"
+            d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+          />
+        </svg>
+        <span class="govuk-footer__licence-description">
+          All content is available under the
+          <a
+            class="govuk-footer__link"
+            href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+            rel="license"
+          >Open Government Licence v3.0</a>, except where otherwise stated
+        </span>
+      </div>
+      <div class="govuk-footer__meta-item">
+        <a
+          class="govuk-footer__link govuk-footer__copyright-logo"
+          href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+        >© Crown copyright</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+    <!-- Javascript -->
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+
+
+  <script src="/extension-assets/govuk-frontend/govuk/all.js"></script>
+
+
+<script src="/public/javascripts/application.js"></script>
+
+
+  <script src="/public/javascripts/auto-store-data.js"></script>
+
+
+
+
+  <!-- GOV.UK Prototype Kit v9.10.1 -->
+
+  </body>
+</html>
