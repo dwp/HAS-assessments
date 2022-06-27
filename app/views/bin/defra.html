@@ -1,0 +1,158 @@
+{% extends "layouts/layout.html" %}
+
+{% block pageTitle %}
+Apply for the Annual Health and Welfare Review funding
+{% endblock %}
+
+{% block header %}
+<!-- Blank header with no service name for the start page -->
+{{ govukHeader() }}
+{% endblock %}
+
+<!-- Adds spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-xl">Prototypes</span>
+    <h1 class="govuk-heading-xl">The Annual Health and Welfare Review
+</h1>
+
+
+
+<table class="govuk-table">
+
+
+
+<thead class="govuk-table__head">
+  <tr class="govuk-table__row">
+  <th class="govuk-table__header" scope="col">User journeys</th>
+  <th class="govuk-table__header" scope="col"></th>
+  <th class="govuk-table__header" scope="col"></th>
+  </tr>
+  </thead>
+
+
+
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><p>Apply</p></th>
+      <td class="govuk-table__cell">
+        <ul class="govuk-list">
+          <li><a href="../ahw/apply">Farmer</a></li>
+        </ul>
+      </td>
+      <td class="govuk-table__cell">
+        <ul class="govuk-list">
+          <li>Assumption - Farmers will need to know they are elibile before engaging with their vet.</li>
+          <li>Explore - how might farmers needs and tasks join with the vet's tasks, data and application.</li>
+          <li>Assumption - Vet training, awareness and engagement is being done through co-design teams.</li>
+          <li>Assumption - To pay the farmer we must identify them to make the payment. Doing this at the beginning ensures RPA can identify the customer and make payment and mitegates risk of none eligible applications.</li>
+      </ul></td>
+    </tr>
+
+
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><p>Submit data</p></th>
+        <td class="govuk-table__cell">
+          <ul class="govuk-list">
+            <li><a href="../ahw/vet">Vet</a></li>
+          </ul>
+        </td>
+        <td class="govuk-table__cell">
+          <ul class="govuk-list">
+            <li>Assumption - The vet needs to share the data they have understood from the farm visit so the national picture can be understood and inform future schemes, policy and support farm and vet user needs.</li>
+        </ul></td>
+      </tr>
+
+
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><p>End to end service</p></th>
+        <td class="govuk-table__cell">
+          <ul class="govuk-list">
+            <li><a href="../ahw/apply/sbs/farmer">Farmer</a></li>
+          </ul>
+        </td>
+        <td class="govuk-table__cell">
+          <ul class="govuk-list">
+            <li>Exploring the farmer online/offline journey and guidance via the GDS step by step navigation pattern </li>
+        </ul></td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><p>End to end service</p></th>
+        <td class="govuk-table__cell">
+          <ul class="govuk-list">
+            <li><a href="../ahw/apply/sbs/vet">Vet</a></li>
+          </ul>
+        </td>
+        <td class="govuk-table__cell">
+          <ul class="govuk-list">
+            <li>Exploring the vet online/offline journey and guidance via the GDS step by step navigation pattern </li>
+        </ul></td>
+      </tr>
+
+
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><p>End to end service</p></th>
+        <td class="govuk-table__cell">
+          <ul class="govuk-list">
+            <li><a href="../ahw/apply/sbs/govukpage">GOV UK page</a></li>
+          </ul>
+        </td>
+        <td class="govuk-table__cell">
+          <ul class="govuk-list">
+            <li>GOV UK page to funnel farmers and vets to the correct GDS step by step navigation pattern for their separate processes </li>
+        </ul></td>
+      </tr>
+
+      </table>
+
+
+  </div>
+
+
+  <div class="govuk-grid-column-one-third">
+    <aside class="app-related-items" role="complementary">
+      <h2 class="govuk-heading-m" id="subsection-title">
+        Related content
+      </h2>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <h3 class="govuk-heading-s">Resources</h3>
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li>
+            <a href="https://defra.sharepoint.com/:x:/r/sites/MST-Defra-SustainableFarmingIncentive2022ProductTeam/_layouts/15/Doc.aspx?sourcedoc=%7BB2E55787-6DC5-46B2-BCBC-3F986E87CC46%7D&file=User%20insights%20and%20needs.xlsx&action=default&mobileredirect=true" target="_blank">
+              User insight and needs
+            </a>
+          </li>
+          <li>
+            <a href="https://eaflood.atlassian.net/wiki/spaces/SFI/pages/3588849665/Vet+Visits" target="_blank">
+              Project Confluence
+            </a>
+          </li>
+          <li>
+            <a href="https://defra.sharepoint.com/sites/MST-Defra-SustainableFarmingIncentive2022ProductTeam/Shared%20Documents/Forms/AllItems.aspx?viewid=c001e37e%2D0f18%2D46ce%2D96ab%2D4070d6882140&id=%2Fsites%2FMST%2DDefra%2DSustainableFarmingIncentive2022ProductTeam%2FShared%20Documents%2FAnimal%20Health%20and%20Welfare&CT=1631111182054&OR=OWA%2DNT&CID=770c6880%2Daf78%2D57d2%2D1344%2Ddb0aacf43184" target="_blank">
+              Team Sharepoint
+            </a>
+          </li>
+        </ul>
+        <h3 class="govuk-heading-s">Design assets</h3>
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li>
+            <a href="https://docs.google.com/drawings/d/1dJIH_7FlDCVj9FPC81DJtrJRtm9TfHJh4p1cxyoT1gs/edit" target="_blank">
+              FFC funding landscape</a>
+          </li>
+          <li>
+            <a href="https://miro.com/app/board/o9J_l8p42uA=/">Miro board</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+
+</div>
+
+
+{% endblock %}
