@@ -3788,7 +3788,7 @@ x:-moz-any-link {
 }
 @media (min-width: 48.0625em) {
   .govuk-header__logo {
-    width: 33.33%;
+    width: 50%;
     padding-right: 15px;
     float: left;
     vertical-align: top;
@@ -3797,7 +3797,7 @@ x:-moz-any-link {
 
 @media (min-width: 48.0625em) {
   .govuk-header__content {
-    width: 66.66%;
+    width: 50%;
     padding-left: 15px;
     float: left;
   }
