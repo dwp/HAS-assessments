@@ -2485,14 +2485,14 @@ x:-moz-any-link {
   margin-bottom: 10px;
   margin-bottom: 10px;
   padding-right: 50px;
-  width: 50%;
+  width: 33.33%;
   padding-right: 15px;
   float: left;
   vertical-align: top;
 }
 
 .govuk-header__content {
-  width: 50%;
+  width: 66.66%;
   padding-left: 15px;
   float: left;
 }
