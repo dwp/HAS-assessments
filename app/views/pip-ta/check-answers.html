@@ -280,11 +280,11 @@ max-width:1160px !important;}
                 Interpreter
               </dt>
               <dd class="govuk-summary-list__value">
-                No
+                {{ data['interpreter'] }}
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="interpreter">
-                  Change<span class="govuk-visually-hidden"> name</span>
+                  Change<span class="govuk-visually-hidden"> if the claimant needs an interpreter</span>
                 </a>
               </dd>
             </div>
@@ -294,25 +294,24 @@ max-width:1160px !important;}
                 Same sex healthcare professional
               </dt>
               <dd class="govuk-summary-list__value">
-                Yes
+                {{ data['same-sex-hcp'] }}
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="same-sex-hcp">
-                  Change<span class="govuk-visually-hidden"> name</span>
+                  Change<span class="govuk-visually-hidden"> if the claimant needs a same sex healthcare professional</span>
                 </a>
               </dd>
             </div>
-
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
                 Additional infomation
               </dt>
               <dd class="govuk-summary-list__value">
-                –
+                {{ data['more-detail'] }}
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="more-info">
-                  Change<span class="govuk-visually-hidden"> name</span>
+                  Change<span class="govuk-visually-hidden"> any additional information</span>
                 </a>
               </dd>
             </div>
@@ -326,22 +325,13 @@ max-width:1160px !important;}
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="app-date-time">
-                  Change<span class="govuk-visually-hidden">date of birth</span>
+                  Change<span class="govuk-visually-hidden">appointment date and time</span>
                 </a>
               </dd>
             </div>
 
 
-
-
-
-
                       </dl>
-
-
-
-
-
 
 
           <form action="confirmation" method="post" novalidate>

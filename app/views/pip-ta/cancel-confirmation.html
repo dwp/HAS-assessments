@@ -223,12 +223,6 @@ max-width:1160px !important;}
   </dl>
 </section>
 
-
-
-
-
-
-
       <div class="govuk-width-container ">
 
 <!-- <a href="start" class="govuk-back-link">Back</a> -->
@@ -236,21 +230,37 @@ max-width:1160px !important;}
 
         <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
 
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds-from-desktop">
-    <form class="form" action="/pip-ta/app-date-time" method="post">
+    <form class="form" action="same-sex-hcp" method="post">
 
-<div class="govuk-form-group">
-          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
-              Additional information
-            </label>
-          </h1>
-          <div id="more-detail-hint" class="govuk-hint">
-            Add any useful information to support the assessment
-          </div>
-          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
-        </div>
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+      {{ govukRadios({
+        classes: "govuk-radios--inline",
+        idPrefix: "cancel-booking",
+        name: "cancel-booking",
+        fieldset: {
+          legend: {
+            text: "Are you sure you want to cancel the booking?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        hint: {
+          text: "The assessment will not be booked and you’ll go back to your caseload."
+        },
+        items: [
+          {
+            value: "yes",
+            text: "Yes"
+          },
+          {
+            value: "no",
+            text: "No"
+          }
+        ]
+      }) }}
 
 
 <br>
@@ -259,8 +269,6 @@ max-width:1160px !important;}
   <button class="govuk-button" data-module="govuk-button">
     Continue
   </button>
-
-  <a class="govuk-link" href="cancel-confirmation">Cancel</a>
 </div>
 
 
