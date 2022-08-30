@@ -66,17 +66,6 @@
   </div>
 </header>
 
-
-
-
-
-
-
-
-
-
-
-
       <div class="govuk-width-container ">
 
         <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
@@ -84,27 +73,18 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
 
-
       {% set mainClasses = "govuk-main-wrapper--l" %}
 
       {% block content %}
 
       <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-          <span class="govuk-caption-xl">Prototypes</span>
-          <h1 class="govuk-heading-l">Book, view and cancel appointments
-      </h1>
-
-      <h2 class="govuk-heading-m">Sprint 6 - Baseline MVP
-  </h2>
+        <div class="govuk-grid-column-full">
+          <h1 class="govuk-heading-l">Book, view and cancel appointments</h1>
+          <span class="govuk-caption-xl">Running on v12.1.1 of the gov.uk prototype kit</span>
 
   <!--<p>No appointments exist in service.</p>
 
-
-
       <table class="govuk-table">
-
-
 
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
@@ -113,8 +93,6 @@
         <th class="govuk-table__header" scope="col">Working assumptions</th>
         </tr>
         </thead>
-
-
 
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
@@ -270,133 +248,142 @@
 
         </table>
           <br><br><br>-->
+<br>
+<br>
 
-          <p>Case management by status.</p>
-
-                    <table class="govuk-table">
-
-
-
-                    <thead class="govuk-table__head">
-                      <tr class="govuk-table__row">
-                      <th class="govuk-table__header" scope="col">User journeys</th>
-                      <th class="govuk-table__header" scope="col"></th>
-                      <th class="govuk-table__header" scope="col">Working assumptions</th>
-                      </tr>
-                      </thead>
-
-
-                      <tr class="govuk-table__row">
-                        <th scope="row" class="govuk-table__header"><p>Task 1. Book TA assessment OR book F2F assessment</p></th>
-                        <!-- <th scope="row" class="govuk-table__header"><p>View existing appointment/s (without HCP assigned)</p></th> -->
-                        <td class="govuk-table__cell">
-                          <ul class="govuk-list">
-                            <li><a href="status-led-design/book-assessment">Appointment booker</a></li>
-                          </ul>
-                        </td>
-                        <td class="govuk-table__cell">
-                          <ul class="govuk-list">
-                            <li>Assumption - updates to status to split TA and F2F allows processes to scale and be itearted on with greater flexibility and outcomes as well as supporting stats, filtering and 'app booker' follow process decided by HCP at IR.</li>
-                        </ul></td>
-                      </tr>
-
-                      <tr class="govuk-table__row">
-                        <th scope="row" class="govuk-table__header"><p>Task 2. Assign an HCP</p></th>
-                        <td class="govuk-table__cell">
-                          <ul class="govuk-list">
-                            <li><a href="status-led-design/assessment-booked">Appointment booker</a></li>
-
-                          </ul>
-                        </td>
-                        <td class="govuk-table__cell">
-                          <ul class="govuk-list">
-                            <li>Assumption - there is an existing process to view 'assessment booked' and 'start assessment' as a list view for resource managers. Do they need to toggle between views as per HB tab design or could they simply open 2 browser windows if needed for MVP until we understand more?</li>
-                        </ul></td>
-                      </tr>
-
-                      <tr class="govuk-table__row">
-                        <th scope="row" class="govuk-table__header"><p>Task 3. Monitors</p></th>
-                        <td class="govuk-table__cell">
-                          <ul class="govuk-list">
-                            <li><a href="status-led-design/start-assessment">Appointment booker</a></li>
-                          </ul>
-                        </td>
-                        <td class="govuk-table__cell">
-                          <ul class="govuk-list">
-                            <li>Assumption - App booker watches progress and status change (start assessment), no action until assessment complete or changes needed so assumption stays in caseload.</li>
-                        </ul></td>
-                      </tr>
-
-
-
-            </table>
-
-
-
-
-
-
-
-
-
-
-
-
-        </div>
-
-
-        <div class="govuk-grid-column-one-third">
-          <aside class="app-related-items" role="complementary">
-            <h2 class="govuk-heading-m" id="subsection-title">
-              Related content
-            </h2>
-            <nav role="navigation" aria-labelledby="subsection-title">
-              <h3 class="govuk-heading-s">Resources</h3>
-              <ul class="govuk-list govuk-!-font-size-16">
-                <li>
-                  <a href="https://dwpdigital.atlassian.net/wiki/spaces/HPDU/pages/132782063771/TP+-+UCD" target="_blank">
-                    User insight and needs
-                  </a>
-                </li>
-                <li>
-                  <a href="https://miro.com/app/board/uXjVO4mWNdw=/" target="_blank">
-                    Personas
-                  </a>
-                </li>
-                <!-- <li>
-                  <a href="https://eaflood.atlassian.net/wiki/spaces/SFI/pages/3588849665/Vet+Visits" target="_blank">
-                    Project Confluence
-                  </a>
-                </li>
-                <li>
-                  <a href="https://defra.sharepoint.com/sites/MST-Defra-SustainableFarmingIncentive2022ProductTeam/Shared%20Documents/Forms/AllItems.aspx?viewid=c001e37e%2D0f18%2D46ce%2D96ab%2D4070d6882140&id=%2Fsites%2FMST%2DDefra%2DSustainableFarmingIncentive2022ProductTeam%2FShared%20Documents%2FAnimal%20Health%20and%20Welfare&CT=1631111182054&OR=OWA%2DNT&CID=770c6880%2Daf78%2D57d2%2D1344%2Ddb0aacf43184" target="_blank">
-                    Team Sharepoint
-                  </a>
-                </li> -->
+<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          Dev baseline
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+      <p class='govuk-body'>This is where the dev baseline lives, it won't change often.</p>
+    </div>
+  </div>
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+          Usability prototype
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+    <p class='govuk-body'>Each sprint there will be a new version pushed with any iterations. You can look through past sprints, and there is also an experimental section where we can try out design ideas.</p>
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Version history for current team</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Version</th>
+            <th scope="col" class="govuk-table__header">Date added</th>
+            <th scope="col" class="govuk-table__header govuk-!-width-two-thirds">Change log</th>
+            <th scope="col" class="govuk-table__header">Link</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">v0.0</th>
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell">
+            <p class="govuk-body"><strong>Experimental area for current sprint</strong></p>
+            </td>
+            <td class="govuk-table__cell"><a href="current/current-index">Current sprint</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">v0.0</th>
+            <td class="govuk-table__cell">30 August 2022</td>
+            <td class="govuk-table__cell">
+              <p class="govuk-body"><strong>Findings:</strong></p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Finding 1</li>
+                <li>Finding 2</li>
+                <li>Finding 3</li>
               </ul>
-              <h3 class="govuk-heading-s">Design assets</h3>
-              <ul class="govuk-list govuk-!-font-size-16">
-                <li>
-                  <a target=”_blank” href="https://miro.com/app/board/uXjVOua5syw=/">Miro board</a>
-                </li>
+              <p class="govuk-body"><strong>Changes:</strong></p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Change 1</li>
+                <li>Change 2</li>
+                <li>Change 3</li>
               </ul>
-            </nav>
-          </aside>
-        </div>
+              <p class="govuk-body"><strong>Jira tickets:</strong></p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Ticket 1</li>
+                <li>Ticket 2</li>
+                <li>Ticket 3</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell"><a href="sprint-11/index">Sprint 11</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">v0.0</th>
+            <td class="govuk-table__cell">17 August 2022</td>
+            <td class="govuk-table__cell">
+              <p class="govuk-body"><strong>Findings:</strong></p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Finding 1</li>
+                <li>Finding 2</li>
+                <li>Finding 3</li>
+              </ul>
+              <p class="govuk-body"><strong>Changes:</strong></p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Change 1</li>
+                <li>Change 2</li>
+                <li>Change 3</li>
+              </ul>
+              <p class="govuk-body"><strong>Jira tickets:</strong></p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Ticket 1</li>
+                <li>Ticket 2</li>
+                <li>Ticket 3</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell"><a href="sprint-10/sprint-10-index">Sprint 10</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+          Related content
+        </span>
+      </h2>
 
-      </div>
+    </div>
+    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+      <h3 class="govuk-heading-s">Resources</h3>
+      <ul class="govuk-list govuk-!-font-size-16">
+        <li>
+          <a href="https://dwpdigital.atlassian.net/wiki/spaces/HPDU/pages/132782063771/TP+-+UCD" target="_blank">
+            User insight and needs
+          </a>
+        </li>
+        <li>
+          <a href="https://miro.com/app/board/uXjVO4mWNdw=/" target="_blank">
+            Personas
+          </a>
+        </li>
+      </ul>
+      <h3 class="govuk-heading-s">Design assets</h3>
+      <ul class="govuk-list govuk-!-font-size-16">
+        <li>
+          <a target=”_blank” href="https://miro.com/app/board/uXjVOua5syw=/">Miro board</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 
+<br>
+<br>
 
       {% endblock %}
-
-
-
-
-
-
-
-
-
 
 
     </div>
@@ -404,34 +391,6 @@
 
         </main>
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <footer class="govuk-footer " role="contentinfo">
   <div class="govuk-width-container ">
@@ -492,24 +451,14 @@
   </div>
 </footer>
 
-
-
-
-
     <!-- Javascript -->
 <script src="/public/javascripts/jquery-1.11.3.js"></script>
 
-
   <script src="/extension-assets/govuk-frontend/govuk/all.js"></script>
-
 
 <script src="/public/javascripts/application.js"></script>
 
-
   <script src="/public/javascripts/auto-store-data.js"></script>
-
-
-
 
   <!-- GOV.UK Prototype Kit v9.10.1 -->
 

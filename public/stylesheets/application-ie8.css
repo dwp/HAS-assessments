@@ -5156,3 +5156,38 @@ x:-moz-any-link {
   margin-top: 0;
   margin-bottom: 0;
 }
+
+.dwp-card {
+  margin-bottom: 40px;
+  background: #fff;
+  border: 1px solid #d8dde0;
+  position: relative;
+  width: 100%;
+}
+
+.dwp-card__content {
+  padding: 24px;
+  position: relative;
+}
+
+.dwp-card--clickable {
+  border-bottom-width: 4px;
+}
+
+.dwp-card--clickable:hover {
+  border-color: #aeb7bd;
+}
+
+.dwp-card--clickable:hover, .dwp-card--clickable:active {
+  cursor: pointer;
+}
+
+@media (min-width: 40.0625em) {
+  .dwp-card {
+    margin-bottom: 48px;
+  }
+
+  .dwp-card__content {
+    padding: 32px;
+  }
+}
