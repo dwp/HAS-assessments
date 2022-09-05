@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>
-  Healthcare professional profiles
-</title>
+      Add healthcare professional profile
+    </title>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#0b0c0c">
 
@@ -72,157 +72,36 @@
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-three-quarters">
 
-            <h1 class="govuk-heading-xl">
-              Add healthcare professional profile
-            </h1>
-
-      <br>
-        <div class="govuk-form-group">
-        <label class="govuk-fieldset__legend--s govuk-!-font-weight-bold" for="HCP-name">
-          Healthcare professional name
-        </label>
-        <p class="govuk-hint">Enter first name followed by surname</p>
-
-        <input class="govuk-input govuk-!-width-two-thirds" id="HCP-name" name="HCP-name" type="text" value=""></div>
-
-
-        <!-- <label class="govuk-label govuk-!-font-weight-bold" for="sort">
-        Agent status
-        <p class="govuk-hint">It is the primary property for this attribute. </p>
-        </label>
-
-      <div class="govuk-radios govuk-radios--inline">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="remove-agent" name="agent-status" type="radio" value="Active" >
-          <label class="govuk-label govuk-radios__label" for="remove-attribute">
-            Active
-          </label>
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="remove-agent-2" name="agent-status" type="radio" value="Inactive" >
-          <label class="govuk-label govuk-radios__label" for="changed-name-2">
-            Inactive
-          </label>
-        </div>
-      </div> -->
-
-        </div>
-        </div>
-
-        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-full">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <h1 class="govuk-fieldset__heading">
-                Select characteristics
-              </h1>
-            </legend>
-            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--hidden">
-        <div class="govuk-grid-column-three-quarters" style="padding-left:0px;">
-
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
-
-              {% from "govuk/components/radios/macro.njk" import govukRadios %}
-
-              {{ govukRadios({
-                classes: "govuk-radios--small",
-                idPrefix: "location",
-                name: "location",
-                fieldset: {
-                  legend: {
-                    text: "Location",
-                    isPageHeading: true,
-                    classes: "govuk-fieldset__legend--m"
-                  }
-                },
-                items: [
-                  {
-                    value: "Tresco House, London",
-                    text: "Tresco House, London"
-                  },
-                  {
-                    value: "Handsworth, Birmingham",
-                    text: "Handsworth, Birmingham"
-                  }
-                ]
-              }) }}
-
-            </fieldset>
-          </div>
-
-            <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset">
-            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-              {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
-
-              {{ govukCheckboxes({
-                idPrefix: "ta-skills",
-                name: "ta-skills",
-                classes: "govuk-checkboxes--small",
-                fieldset: {
-                  legend: {
-                    text: "Telephone assessment (TA) skills",
-                    isPageHeading: true,
-                    classes: "govuk-fieldset__legend--m"
-                  }
-                },
-                items: [
-                  {
-                    value: "Personal Independence Payment (PIP)",
-                    text: "Personal Independence Payment (PIP)"
-                  },
-                  {
-                    value: "Work Capability Assessment (WCA)",
-                    text: "Work Capability Assessment (WCA)"
-                  },
-                  {
-                    value: "Work Capability Assessment Complex Neuro (WCA CN)",
-                    text: "Work Capability Assessment Complex Neuro (WCA CN)"
-                  }
-                ]
-              }) }}
-
-        </fieldset>
-          </div>
-
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
-          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
             {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
             {{ govukCheckboxes({
-              idPrefix: "f2f-skills",
-              name: "f2f-skills",
-              classes: "govuk-checkboxes--small",
+              idPrefix: "HCP-assessment-types",
+              name: "HCP-assessment-types",
               fieldset: {
                 legend: {
-                  text: "Face to face (F2F) assessment skills",
+                  text: "Which types of assessment can they do?",
                   isPageHeading: true,
-                  classes: "govuk-fieldset__legend--m"
+                  classes: "govuk-fieldset__legend--l"
                 }
+              },
+              hint: {
+                text: "Select all that apply."
               },
               items: [
                 {
-                  value: "Personal Independence Payment (PIP)",
-                  text: "Personal Independence Payment (PIP)"
+                  value: "WCA",
+                  text: "Workplace Capability Assessment"
                 },
                 {
-                  value: "Work Capability Assessment (WCA)",
-                  text: "Work Capability Assessment (WCA)"
+                  value: "WCA CN",
+                  text: "Workplace Capability Assessment Complex Neuro"
                 },
                 {
-                  value: "Work Capability Assessment Complex Neuro (WCA CN)",
-                  text: "Work Capability Assessment Complex Neuro (WCA CN)"
+                  value: "PIP",
+                  text: "Personal Independence Payment"
                 }
               ]
             }) }}
-
-      </fieldset>
-        </div>
-
-          </div>
 
             </fieldset>
           </div>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>
-  Healthcare professional profiles
+  Check your answers - Healthcare professional profile
 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#0b0c0c">
@@ -103,7 +103,7 @@ Healthcare professional profile details &nbsp;&nbsp;&nbsp;&nbsp;
       {{ data['HCP-name'] }}
     </dd>
     <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="add-profile">
+      <a class="govuk-link" href="HCP-name">
         Change<span class="govuk-visually-hidden"> name</span>
       </a>
     </dd>
@@ -113,37 +113,37 @@ Healthcare professional profile details &nbsp;&nbsp;&nbsp;&nbsp;
       Location
     </dt>
     <dd class="govuk-summary-list__value">
-      {{ data['location'] }}
+      {{ data['HCP-location'] }}
     </dd>
     <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="add-profile">
+      <a class="govuk-link" href="HCP-location">
         Change<span class="govuk-visually-hidden"> location</span>
       </a>
     </dd>
   </div>
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key" style="border-bottom:0px;">
-      Telephone assessment (TA) capabilities
+      Can they do physical assessments
     </dt>
     <dd class="govuk-summary-list__value" style="border-bottom:0px;">
-      {{ data['ta-skills'] }}
+      {{ data['HCP-face-to-face'] }}
     </dd>
     <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="add-profile">
-        Change<span class="govuk-visually-hidden"> telephone assessment skills</span>
+      <a class="govuk-link" href="HCP-face-to-face">
+        Change<span class="govuk-visually-hidden"> physical assessments</span>
       </a>
     </dd>
   </div>
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key" style="border-bottom:0px;">
-      Face to face (F2F) assessment capabilities
+      Assessment types
     </dt>
     <dd class="govuk-summary-list__value" style="border-bottom:0px;">
-      {{ data['f2f-skills'] }}
+      {{ data['HCP-assessment-types'] }}
     </dd>
     <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="add-profile">
-        Change<span class="govuk-visually-hidden"> face to face assessment skills</span>
+      <a class="govuk-link" href="HCP-assessment-types">
+        Change<span class="govuk-visually-hidden"> assessment types</span>
       </a>
     </dd>
   </div>

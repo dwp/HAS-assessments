@@ -239,38 +239,35 @@ max-width:1160px !important;}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds-from-desktop">
-    <form class="form" action="app-date-time" method="post">
+    <form class="form" action="interpreter" method="post">
 
-    <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-          <h1 class="govuk-fieldset__heading">
-            Does the assessment require a trained HCP in complex neuro?
-          </h1>
-        </legend>
-        <!-- <details class="govuk-details" data-module="govuk-details">
-  <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-      Check if an assesment needs a complex neuro trained HCP
-    </span>
-  </summary>
-  <div class="govuk-details__text">
-    We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
-  </div>
-</details> -->
-        <div class="govuk-radios" data-module="govuk-radios">
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
-            <label class="govuk-label govuk-radios__label" for="where-do-you-live">
-              Yes
-            </label>
-          </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
-            <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
-              No
-            </label>
-          </div>
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+      {{ govukRadios({
+        classes: "govuk-radios--inline",
+        idPrefix: "complex-neuro",
+        name: "complex-neuro",
+        fieldset: {
+          legend: {
+            text: "Is this a complex neuro assessment?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        hint: {
+          text: "This will require a doctor trained in WCA complex neuro."
+        },
+        items: [
+          {
+            value: "yes",
+            text: "Yes"
+          },
+          {
+            value: "no",
+            text: "No"
+          }
+        ]
+      }) }}
 
 
 <br>
@@ -280,7 +277,7 @@ max-width:1160px !important;}
     Continue
   </button>
 
-  <a class="govuk-link" href="">Cancel</a>
+  <a class="govuk-link" href="/current/wca-f2f/cancel-confirmation">Cancel</a>
 </div>
 
 
