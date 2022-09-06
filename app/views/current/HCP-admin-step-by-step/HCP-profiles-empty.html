@@ -63,92 +63,24 @@
 <!-- <a href="start" class="govuk-back-link">Back</a> -->
 <a class="govuk-back-link docs-creator" href="javascript:history.go(-1)">Back</a>
 
-<main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing " id="main-content" role="main">
+  <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+    <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
 
-<div class="govuk-grid-row">
-<div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Healthcare professional profiles
+        <p class="govuk-hint"></p>
+      </h1>
 
-<h1 class="govuk-heading-xl">
-Check and confirm
-</h1>
+      <p>You have not added any healthcare professional profiles yet.</p>
 
-
-</div>
-</div>
-
-<div class="govuk-grid-row">
-
-
-<div class="govuk-grid-column-full">
-
-<p class="govuk-heading-m">
-Healthcare professional profile details &nbsp;&nbsp;&nbsp;&nbsp;
-</p>
-
-<hr class="govuk-section-break govuk-section-break--m govuk-section-break--hidden">
-
-
-<form class="form"  method="post" action="HCP-profiles-new-added">
-<div class="govuk-form-group">
-
-  <hr class="govuk-section-break govuk-section-break--m govuk-section-break--hidden">
-  <!-- <p><strong class="govuk-heading-m">Agent details</strong></p> -->
-
-<dl class="govuk-summary-list">
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Name
-    </dt>
-    <dd class="govuk-summary-list__value">
-      {{ data['HCP-name'] }}
-    </dd>
-    <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="add-profile">
-        Change<span class="govuk-visually-hidden"> name</span>
-      </a>
-    </dd>
+      <br><br>
+      <a href="/current/HCP-admin/HCP-name"><button class="govuk-button" data-module="govuk-button">Add profile</button></a>
+    </div>
   </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Location
-    </dt>
-    <dd class="govuk-summary-list__value">
-      {{ data['location'] }}
-    </dd>
-    <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="add-profile">
-        Change<span class="govuk-visually-hidden"> location</span>
-      </a>
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key" style="border-bottom:0px;">
-      Skills
-    </dt>
-    <dd class="govuk-summary-list__value" style="border-bottom:0px;">
-      {{ data['skills'] }}
-    </dd>
-    <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="add-profile">
-        Change<span class="govuk-visually-hidden"> skills</span>
-      </a>
-    </dd>
-  </div>
-</dl>
 
-<br><br>
-<button class="govuk-button" data-module="govuk-button">Confirm and create profile</button>
-
+  </main>
 </div>
-</form>
-
-</div>
-</div>
-
-
-</main>
-</div>
-
 
 
     <footer class="govuk-footer " role="contentinfo">
