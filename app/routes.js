@@ -85,7 +85,7 @@ router.post('/deactivate-hcp-answer', function (req, res) {
   // Check whether the variable matches a condition
   if (deactivateHCPYesNo == "Yes"){
     // Send user to caseload page
-    res.redirect('/current/HCP-admin/HCP-profiles')
+    res.redirect('/current/HCP-admin/HCP-profiles-deactivated-success')
   } else {
     // Send user to previous page
     res.redirect('javascript:history.go(-1)')

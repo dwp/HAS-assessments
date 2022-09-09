@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
-<html lang="en" class="govuk-template ">
+<html lang="en" class="govuk-template">
   <head>
     <meta charset="utf-8">
     <title>
-  Claimant details
-</title>
+      Healthcare professional profiles
+    </title>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#0b0c0c">
 
@@ -51,73 +50,109 @@
           </span>
       </a>
     </div>
-
+    <!-- <div class="govuk-header__content">
+      <a href="#" class="govuk-header__link govuk-header__link-service-name">
+        Service name
+      </a>
+    </div> -->
   </div>
 </header>
 
-</style>
-
-
-      <div class="govuk-width-container ">
+<div class="govuk-width-container ">
 
 <!-- <a href="start" class="govuk-back-link">Back</a> -->
 <a class="govuk-back-link docs-creator" href="javascript:history.go(-1)">Back</a>
 
-        <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds-from-desktop">
-    <form class="form" action="/deactivate-hcp-answer" method="post">
+  <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+    <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
 
 
-      <h1 class="govuk-heading-l">Are you sure you want to deactivate {{ data['HCP-name'] }}'s profile?</h1>
+      <form class="form" action="check-your-answers-location-decided" method="post">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-three-quarters">
 
-      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+            <h1 class="govuk-heading-xl">
+              Add healthcare professional profile for Handsworth
+            </h1>
 
-      {{ govukRadios({
-        classes: "govuk-radios--inline",
-        idPrefix: "deactivate-hcp",
-        name: "deactivate-hcp",
-        fieldset: {
-          legend: {
-            isPageHeading: true,
-            classes: "govuk-fieldset__legend--l"
-          }
-        },
-        hint: {
-          text: "The HCP profile will be removed and you won't be able to assign any more assessments to them."
-        },
-        items: [
-          {
-            value: "Yes",
-            text: "Yes"
-          },
-          {
-            value: "No",
-            text: "No"
-          }
-        ]
-      }) }}
+            <div class="govuk-inset-text">
+              You are adding a profile for an HCP based in Handsworth, Birmingham. If you want to make one for another location, return to the location selection page.
+            </div>
 
+      <br>
+        <div class="govuk-form-group">
+        <label class="govuk-fieldset__legend--s govuk-!-font-weight-bold" for="HCP-name">
+          Full name
+        </label>
+        <p class="govuk-hint"></p>
 
-<br>
-<br>
-<div class="govuk-button-group">
-  <button class="govuk-button" data-module="govuk-button">
-    Continue
-  </button>
-</div>
-
+        <input class="govuk-input govuk-!-width-two-thirds" id="HCP-name" name="HCP-name" type="text" value=""></div>
 
         </div>
+        </div>
 
-      </fieldset>
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--hidden">
+        <div class="govuk-grid-column-one-half" style="padding-left:0px;">
+
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+            {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+            {{ govukCheckboxes({
+              idPrefix: "skills",
+              name: "skills",
+              classes: "govuk-checkboxes--small",
+              fieldset: {
+                legend: {
+                  text: "Skills",
+                  isPageHeading: true,
+                  classes: "govuk-fieldset__legend--m"
+                }
+              },
+              items: [
+                {
+                  value: "Face to face assessments (F2F)",
+                  text: "Face to face assessments (F2F)"
+                },
+                {
+                  value: "Personal Independence Payment telephone assessment (PIP TA)",
+                  text: "Personal Independence Payment telephone assessment (PIP TA)"
+                },
+                {
+                  value: "Work Capability Assessment telephone assessment (WCA TA)",
+                  text: "Work Capability Assessment telephone assessment (WCA TA)"
+                },
+                {
+                  value: "Work Capability Assessment Complex Neuro (WCA CN)",
+                  text: "Work Capability Assessment Complex Neuro (WCA CN)"
+                }
+              ]
+            }) }}
+
+            </fieldset>
+          </div>
+          </div>
+
+        </div>
+        </div>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--hidden">
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+    </form>
+
     </div>
+  </div>
 
+  </main>
 </div>
-
-        </main>
-      </div>
 
 
 
@@ -133,13 +168,13 @@
 
                 <li class="govuk-footer__inline-list-item">
                   <a class="govuk-footer__link" href="https://govuk-prototype-kit.herokuapp.com/">
-
+                    GOV.UK Prototype Kit v9.10.1
                   </a>
                 </li>
 
                 <li class="govuk-footer__inline-list-item">
                   <a class="govuk-footer__link" href="/prototype-admin/clear-data">
-
+                    Clear data
                   </a>
                 </li>
 
