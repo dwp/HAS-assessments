@@ -65,7 +65,7 @@
 
   <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
     <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
+    <div class="govuk-grid-column-two-thirds">
 
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
@@ -74,7 +74,7 @@
         name: "which-location",
         fieldset: {
           legend: {
-            text: "Which location do you want to manage?",
+            text: "Select a location to add a new healthcare professional",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
@@ -92,7 +92,7 @@
       }) }}
 
       <br><br>
-      <a href="/current/HCP-admin/HCP-profiles-location-decided"><button class="govuk-button" data-module="govuk-button">Continue</button></a>
+      <a href="/current/HCP-admin/HCP-profiles"><button class="govuk-button" data-module="govuk-button">Continue</button></a>
     </div>
   </div>
 

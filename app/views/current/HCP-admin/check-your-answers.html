@@ -66,10 +66,10 @@
 <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing " id="main-content" role="main">
 
 <div class="govuk-grid-row">
-<div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-column-full-width">
 
 <h1 class="govuk-heading-xl">
-Check and confirm
+Confirm healthcare professional details
 </h1>
 
 
@@ -81,12 +81,6 @@ Check and confirm
 
 <div class="govuk-grid-column-full">
 
-<p class="govuk-heading-m">
-Healthcare professional profile details &nbsp;&nbsp;&nbsp;&nbsp;
-<a class="govuk-link" href="add-profile" >
-  <span class="govuk-body">Change</span>
-</a>
-</p>
 
 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--hidden">
 
@@ -107,14 +101,6 @@ Healthcare professional profile details &nbsp;&nbsp;&nbsp;&nbsp;
     </dd>
   </div>
   <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Location
-    </dt>
-    <dd class="govuk-summary-list__value">
-      {{ data['location'] }}
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key" style="border-bottom:0px;">
       Skills
     </dt>
@@ -128,7 +114,13 @@ Healthcare professional profile details &nbsp;&nbsp;&nbsp;&nbsp;
 <button class="govuk-button" data-module="govuk-button">Confirm and create profile</button>
 
 </div>
+<a class="govuk-link" href="add-profile" >
+  <span class="govuk-body">Or change details</span>
+</a>
+
 </form>
+
+<br><br>
 
 </div>
 </div>

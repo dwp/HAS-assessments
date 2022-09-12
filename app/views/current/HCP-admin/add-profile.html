@@ -73,8 +73,12 @@
           <div class="govuk-grid-column-three-quarters">
 
             <h1 class="govuk-heading-xl">
-              Add healthcare professional profile
+              Add healthcare professional profile for Handsworth
             </h1>
+
+            <div class="govuk-inset-text">
+              You are adding this healthcare professional to Handsworth, Birmingham. Return to select a location to add to a different location. 
+            </div>
 
       <br>
         <div class="govuk-form-group">
@@ -95,36 +99,6 @@
             <hr class="govuk-section-break govuk-section-break--m govuk-section-break--hidden">
         <div class="govuk-grid-column-one-half" style="padding-left:0px;">
 
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
-
-              {% from "govuk/components/radios/macro.njk" import govukRadios %}
-
-              {{ govukRadios({
-                classes: "govuk-radios--small",
-                idPrefix: "location",
-                name: "location",
-                fieldset: {
-                  legend: {
-                    text: "Location",
-                    isPageHeading: true,
-                    classes: "govuk-fieldset__legend--m"
-                  }
-                },
-                items: [
-                  {
-                    value: "Tresco House, London",
-                    text: "Tresco House, London"
-                  },
-                  {
-                    value: "Handsworth, Birmingham",
-                    text: "Handsworth, Birmingham"
-                  }
-                ]
-              }) }}
-
-            </fieldset>
-          </div>
 
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
@@ -144,20 +118,20 @@
               },
               items: [
                 {
-                  value: "Face to face assessments (F2F)",
-                  text: "Face to face assessments (F2F)"
+                  value: "Face to face assessments",
+                  text: "Face to face assessments"
                 },
                 {
-                  value: "Personal Independence Payment telephone assessment (PIP TA)",
-                  text: "Personal Independence Payment telephone assessment (PIP TA)"
+                  value: "Personal Independence Payment telephone assessment",
+                  text: "Personal Independence Payment telephone assessment"
                 },
                 {
-                  value: "Work Capability Assessment telephone assessment (WCA TA)",
-                  text: "Work Capability Assessment telephone assessment (WCA TA)"
+                  value: "Work Capability Assessment telephone assessment",
+                  text: "Work Capability Assessment telephone assessment"
                 },
                 {
-                  value: "Work Capability Assessment Complex Neuro (WCA CN)",
-                  text: "Work Capability Assessment Complex Neuro (WCA CN)"
+                  value: "Work Capability Assessment Complex Neuro",
+                  text: "Work Capability Assessment Complex Neuro"
                 }
               ]
             }) }}

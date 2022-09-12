@@ -70,7 +70,13 @@
     <form class="form" action="/deactivate-hcp-answer" method="post">
 
 
-      <h1 class="govuk-heading-l">Are you sure you want to deactivate {{ data['HCP-name'] }}'s profile?</h1>
+      <h1 class="govuk-heading-l">Are you sure you want to deactivate {{ data['HCP-name'] }}?</h1>
+
+      {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
+      {{ govukInsetText({
+        text: "Make sure this healthcare professional does not have any assessments to do before deactivating them. The HCP profile will be deactivated and you won't be able to assign any more assessments to them."
+      }) }}
 
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
@@ -83,9 +89,6 @@
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
-        },
-        hint: {
-          text: "Make sure that they do not have any assessments currently assigned to them. The HCP profile will be removed and you won't be able to assign any more assessments to them."
         },
         items: [
           {

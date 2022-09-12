@@ -76,47 +76,42 @@
     </div>
     <div class="govuk-notification-banner__content">
       <h3 class="govuk-notification-banner__heading">
-        Healthcare professional profile added
+        {{ data['HCP-name'] }} added to Handsworth
       </h3>
       <p class="govuk-body" style="max-width:100%;">
       <strong>Name: </strong> {{ data['HCP-name'] }} <br>
-      <strong>Location: </strong> {{ data['location'] }} <br>
       <strong>Skills: </strong> {{ data['skills'] }}<br>
       </p>
       </div>
     </div>
 
       <h1 class="govuk-heading-xl">
-        Healthcare professional profiles
+        Handsworth healthcare professionals
         <p class="govuk-hint"></p>
       </h1>
 
       <table class="govuk-table">
       <thead class="govuk-table__head">
       <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header" style="width:15%">Name</th>
-        <th scope="col" class="govuk-table__header" style="width:15%">Location</th>
-        <th scope="col" class="govuk-table__header" style="width:55%">Skills</th>
+        <th scope="col" class="govuk-table__header" style="width:20%">Name</th>
+        <th scope="col" class="govuk-table__header" style="width:65%">Skills</th>
         <th scope="col" class="govuk-table__header" style="width:15%">Actions</th>
       </tr>
       </thead>
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">Joe Bloggs</td>
-          <td class="govuk-table__cell">Handsworth, Birmingham</td>
-          <td class="govuk-table__cell">WCA TA, WCA CN</td>
+          <td class="govuk-table__cell">Workplace Capability Assessment telephone assessment, Workplace Capability Assessment Complex Neuro</td>
           <td class="govuk-table__cell"><a href="#">Deactivate</a></td>
         </tr>
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">Jane Smith</td>
-          <td class="govuk-table__cell">Handsworth, Birmingham</td>
-          <td class="govuk-table__cell">F2F, PIP TA, WCA TA</td>
+          <td class="govuk-table__cell">Face to face assessments, Personal Independence Payment telephone assessment, Workplace Capability Assessment telephone assessment</td>
           <td class="govuk-table__cell" ><a href="#">Deactivate</a></td>
         </tr>
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">{{ data['HCP-name'] }} </td>
-          <td class="govuk-table__cell">{{ data['location'] }} </td>
-          <td class="govuk-table__cell">F2F, PIP TA, WCA TA</td>
+          <td class="govuk-table__cell">Face to face assessments, Personal Independence Payment telephone assessment, Workplace Capability Assessment telephone assessment</td>
           <td class="govuk-table__cell" ><a href="deactivate-confirmation">Deactivate</a></td>
         </tr>
 
@@ -124,7 +119,7 @@
       </table>
 
       <br><br>
-      <a href="/current/HCP-admin/add-profile"><button class="govuk-button" data-module="govuk-button">Add profile</button></a>
+      <a href="/current/HCP-admin/add-profile"><button class="govuk-button" data-module="govuk-button">Add a HCP</button></a>
     </div>
   </div>
 
