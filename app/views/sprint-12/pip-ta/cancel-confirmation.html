@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
-<html lang="en" class="govuk-template">
+<html lang="en" class="govuk-template ">
   <head>
     <meta charset="utf-8">
     <title>
-  Healthcare professional profiles
-</title>
+      Cancel booking confirmation
+    </title>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#0b0c0c">
 
@@ -50,54 +51,236 @@
           </span>
       </a>
     </div>
-    <!-- <div class="govuk-header__content">
-      <a href="#" class="govuk-header__link govuk-header__link-service-name">
-        Service name
-      </a>
-    </div> -->
+
   </div>
 </header>
 
-<div class="govuk-width-container ">
+
+
+<!-- Styling of head and keydetails bar -->
+<style type="text/css">
+
+  .govuk-header {
+    border-bottom: 10px solid #000000;
+  }
+
+  .govuk-header__container {
+    border-bottom: 0px;
+  }
+
+
+.key-details-bar {
+  background-color: #005ea5;
+}
+
+.key-details-bar .key-details-bar__key-details {
+  margin: 0 auto;
+  max-width: 990px;
+  padding: 20px 30px 20px 60px;
+  position: relative;
+  font-family: "Arial";
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details {
+    padding: 20px 15px;
+  }
+}
+
+.key-details-bar .key-details-bar__key-details * {
+  color: #fff;
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__top-block::after,
+.key-details-bar .key-details-bar__key-details .key-details-bar__bottom-block::after {
+  clear: both;
+  content: ' ';
+  display: block;
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__bottom-block {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  content: ' ';
+  padding-top: 10px;
+  margin-top: 6px;
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details .key-details-bar__bottom-block {
+    border: 0;
+  }
+}
+
+.key-details-bar .key-details-bar__key-details dd,
+.key-details-bar .key-details-bar__key-details dt {
+  float: left;
+  font-size: 19px;
+  margin-right: 5px;
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details dd,
+  .key-details-bar .key-details-bar__key-details dt {
+    float: none;
+    font-size: 16px;
+    margin: 0;
+  }
+}
+
+.key-details-bar .key-details-bar__key-details dd {
+  margin-right: 20px;
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details dd {
+    margin-bottom: 20px;
+  }
+  .key-details-bar .key-details-bar__key-details dd:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__name {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11111;
+  margin-right: 10px;
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details .key-details-bar__name {
+    font-size: 24px;
+    line-height: 1.04167;
+    float: left;
+    margin: 0 5px 0 0;
+  }
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__nino {
+  font-size: 24px;
+  line-height: 1;
+  margin-top: 12px;
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details .key-details-bar__nino {
+    font-size: 18px;
+    float: left;
+    margin: 5px 0 0 0;
+  }
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__status {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  padding: 5px 8px 0;
+  color: #005ea5;
+  background-color: #fff;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  float: right;
+  margin: 5px 0 0;
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details .key-details-bar__status {
+    font-size: 14px;
+    float: left;
+    clear: both;
+    margin-top: 5px;
+  }
+}
+
+#global-header .header-wrapper{
+max-width:1160px !important;}
+</style>
+
+<section class="key-details-bar" role="contentinfo" aria-label="Key details">
+  <dl class="key-details-bar__key-details">
+    <div class="key-details-bar__top-block">
+      <dt class="govuk-visually-hidden">Name:</dt>
+      <dt class="key-details-bar__name">Noelle Carmel</dt>
+
+      <dt class="govuk-visually-hidden">National Insurance number:</dt>
+      <dt class="key-details-bar__nino">RN 00 01 23 A</dt>
+
+      <dt class="govuk-visually-hidden">Claim status:</dt>
+      <dd class="key-details-bar__status">Book telephone assessment</dd>
+    </div>
+
+    <div class="key-details-bar__bottom-block">
+      <dt>Date of birth:</dt>
+      <dd>31 December 1969</dd>
+
+      <dt>Postcode:</dt>
+      <dd>N2 1XX</dd>
+
+      <!-- <dt>SRTI:</dt>
+      <dd>No</dd> -->
+    </div>
+  </dl>
+</section>
+
+      <div class="govuk-width-container ">
 
 <!-- <a href="start" class="govuk-back-link">Back</a> -->
 <a class="govuk-back-link docs-creator" href="javascript:history.go(-1)">Back</a>
 
-  <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
-    <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+        <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+    <form class="form" action="/cancel-pip-answer" method="post">
 
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
       {{ govukRadios({
-        idPrefix: "which-location",
-        name: "which-location",
+        classes: "govuk-radios--inline",
+        idPrefix: "cancel-pip-booking",
+        name: "cancel-pip-booking",
         fieldset: {
           legend: {
-            text: "Select a location to add a new healthcare professional (HCP)"z,
+            text: "Are you sure you want to cancel the booking?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
         },
+        hint: {
+          text: "The assessment will not be booked and you’ll go back to your caseload."
+        },
         items: [
           {
-            value: "Handsworth, Birmingham",
-            text: "Handsworth, Birmingham"
+            value: "Yes",
+            text: "Yes"
           },
           {
-            value: "Tresco House, London",
-            text: "Tresco House, London"
+            value: "No",
+            text: "No"
           }
         ]
       }) }}
 
-      <br><br>
-      <a href="/current/HCP-admin/HCP-profiles"><button class="govuk-button" data-module="govuk-button">Continue</button></a>
-    </div>
-  </div>
 
-  </main>
+<br>
+<br>
+<div class="govuk-button-group">
+  <button class="govuk-button" data-module="govuk-button">
+    Continue
+  </button>
 </div>
+
+
+        </div>
+
+      </fieldset>
+    </div>
+
+</div>
+
+        </main>
+      </div>
 
 
 
@@ -113,13 +296,13 @@
 
                 <li class="govuk-footer__inline-list-item">
                   <a class="govuk-footer__link" href="https://govuk-prototype-kit.herokuapp.com/">
-                    GOV.UK Prototype Kit v9.10.1
+
                   </a>
                 </li>
 
                 <li class="govuk-footer__inline-list-item">
                   <a class="govuk-footer__link" href="/prototype-admin/clear-data">
-                    Clear data
+
                   </a>
                 </li>
 

@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>
-      Handsworth healthcare professionals
-</title>
+      Add healthcare professional profile
+    </title>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#0b0c0c">
 
@@ -67,51 +67,48 @@
     <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
 
-    <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-    <div class="govuk-notification-banner__header">
-      <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-        Success
-      </h2>
-    </div>
-    <div class="govuk-notification-banner__content">
-      <h3 class="govuk-notification-banner__heading">
-        {{ data['HCP-name'] }} has been deactivated from this location
-      </h3>
-      <p class="govuk-body" style="max-width:100%;">
-      </p>
-    </div>
-    </div>
 
-      <h1 class="govuk-heading-xl">
-        Healthcare professional profiles
-        <p class="govuk-hint"></p>
-      </h1>
+      <form class="form" action="HCP-assessment-types" method="post">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-three-quarters">
 
-      <table class="govuk-table">
-      <thead class="govuk-table__head">
-      <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header" style="width:20%">Name</th>
-        <th scope="col" class="govuk-table__header" style="width:65%">Skills</th>
-        <th scope="col" class="govuk-table__header" style="width:15%">Actions</th>
-      </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Joe Bloggs</td>
-          <td class="govuk-table__cell">Workplace Capability Assessment telephone assessment, Workplace Capability Assessment Complex Neuro</td>
-          <td class="govuk-table__cell"><a href="#">Deactivate</a></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Jane Smith</td>
-          <td class="govuk-table__cell">Face to face assessment, Personal Independence Payment telephone assessment, Workplace Capability Assessment telephone assessment</td>
-          <td class="govuk-table__cell" ><a href="#">Deactivate</a></td>
-        </tr>
+            {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
-      </tbody>
-      </table>
+            {{ govukRadios({
+              classes: "govuk-radios--inline",
+              idPrefix: "HCP-face-to-face",
+              name: "HCP-face-to-face",
+              fieldset: {
+                legend: {
+                  text: "Can they do physical assessments?",
+                  isPageHeading: true,
+                  classes: "govuk-fieldset__legend--l"
+                }
+              },
+              items: [
+                {
+                  value: "Yes",
+                  text: "Yes"
+                },
+                {
+                  value: "No",
+                  text: "No"
+                }
+              ]
+            }) }}
 
-      <br><br>
-      <a href="/current/HCP-admin/add-profile"><button class="govuk-button" data-module="govuk-button">Add a HCP</button></a>
+            </fieldset>
+          </div>
+        </div>
+
+        </div>
+        </div>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--hidden">
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+    </form>
+
     </div>
   </div>
 

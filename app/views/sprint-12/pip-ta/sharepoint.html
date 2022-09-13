@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
-<html lang="en" class="govuk-template">
+<html lang="en" class="govuk-template ">
   <head>
     <meta charset="utf-8">
     <title>
-  Healthcare professional profiles
+  Claimant details
 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#0b0c0c">
@@ -50,81 +51,223 @@
           </span>
       </a>
     </div>
-    <!-- <div class="govuk-header__content">
-      <a href="#" class="govuk-header__link govuk-header__link-service-name">
-        Service name
-      </a>
-    </div> -->
+
   </div>
 </header>
 
-<div class="govuk-width-container ">
+
+
+<!-- Styling of head and keydetails bar -->
+<style type="text/css">
+
+  .govuk-header {
+    border-bottom: 10px solid #000000;
+  }
+
+  .govuk-header__container {
+    border-bottom: 0px;
+  }
+
+
+.key-details-bar {
+  background-color: #005ea5;
+}
+
+.key-details-bar .key-details-bar__key-details {
+  margin: 0 auto;
+  max-width: 990px;
+  padding: 20px 30px 20px 60px;
+  position: relative;
+  font-family: "Arial";
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details {
+    padding: 20px 15px;
+  }
+}
+
+.key-details-bar .key-details-bar__key-details * {
+  color: #fff;
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__top-block::after,
+.key-details-bar .key-details-bar__key-details .key-details-bar__bottom-block::after {
+  clear: both;
+  content: ' ';
+  display: block;
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__bottom-block {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  content: ' ';
+  padding-top: 10px;
+  margin-top: 6px;
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details .key-details-bar__bottom-block {
+    border: 0;
+  }
+}
+
+.key-details-bar .key-details-bar__key-details dd,
+.key-details-bar .key-details-bar__key-details dt {
+  float: left;
+  font-size: 19px;
+  margin-right: 5px;
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details dd,
+  .key-details-bar .key-details-bar__key-details dt {
+    float: none;
+    font-size: 16px;
+    margin: 0;
+  }
+}
+
+.key-details-bar .key-details-bar__key-details dd {
+  margin-right: 20px;
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details dd {
+    margin-bottom: 20px;
+  }
+  .key-details-bar .key-details-bar__key-details dd:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__name {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11111;
+  margin-right: 10px;
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details .key-details-bar__name {
+    font-size: 24px;
+    line-height: 1.04167;
+    float: left;
+    margin: 0 5px 0 0;
+  }
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__nino {
+  font-size: 24px;
+  line-height: 1;
+  margin-top: 12px;
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details .key-details-bar__nino {
+    font-size: 18px;
+    float: left;
+    margin: 5px 0 0 0;
+  }
+}
+
+.key-details-bar .key-details-bar__key-details .key-details-bar__status {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  padding: 5px 8px 0;
+  color: #005ea5;
+  background-color: #fff;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  float: right;
+  margin: 5px 0 0;
+}
+
+@media (max-width: 670px) {
+  .key-details-bar .key-details-bar__key-details .key-details-bar__status {
+    font-size: 14px;
+    float: left;
+    clear: both;
+    margin-top: 5px;
+  }
+}
+
+#global-header .header-wrapper{
+max-width:1160px !important;}
+</style>
+
+<section class="key-details-bar" role="contentinfo" aria-label="Key details">
+  <dl class="key-details-bar__key-details">
+    <div class="key-details-bar__top-block">
+      <dt class="govuk-visually-hidden">Name:</dt>
+      <dt class="key-details-bar__name">Noelle Carmel</dt>
+
+      <dt class="govuk-visually-hidden">National Insurance number:</dt>
+      <dt class="key-details-bar__nino">RN 00 01 23 A</dt>
+
+      <dt class="govuk-visually-hidden">Claim status:</dt>
+      <dd class="key-details-bar__status">Book telephone assessment</dd>
+    </div>
+
+    <div class="key-details-bar__bottom-block">
+      <dt>Date of birth:</dt>
+      <dd>31 December 1969</dd>
+
+      <dt>Postcode:</dt>
+      <dd>N2 1XX</dd>
+
+      <!-- <dt>SRTI:</dt>
+      <dd>No</dd> -->
+    </div>
+  </dl>
+</section>
+
+
+
+
+
+
+
+      <div class="govuk-width-container ">
 
 <!-- <a href="start" class="govuk-back-link">Back</a> -->
 <a class="govuk-back-link docs-creator" href="javascript:history.go(-1)">Back</a>
 
-  <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+        <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
 
-    <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
 
-      <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-    <div class="govuk-notification-banner__header">
-      <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-        Success
-      </h2>
-    </div>
-    <div class="govuk-notification-banner__content">
-      <h3 class="govuk-notification-banner__heading">
-        {{ data['HCP-name'] }} added to Handsworth
-      </h3>
-      <p class="govuk-body" style="max-width:100%;">
-      <strong>Name: </strong> {{ data['HCP-name'] }} <br>
-      <strong>Skills: </strong> {{ data['skills'] }}<br>
-      </p>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+    <form class="form" action="interpreter" method="post">
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
+            Enter the claimants sharepoint link
+          </label>
+        </h1>
+        <input class="govuk-input" id="event-name" name="event-name" type="text">
       </div>
-    </div>
 
-      <h1 class="govuk-heading-xl">
-        Handsworth healthcare professionals
-        <p class="govuk-hint"></p>
-      </h1>
 
-      <table class="govuk-table">
-      <thead class="govuk-table__head">
-      <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header" style="width:20%">Name</th>
-        <th scope="col" class="govuk-table__header" style="width:65%">Skills</th>
-        <th scope="col" class="govuk-table__header" style="width:15%">Actions</th>
-      </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Joe Bloggs</td>
-          <td class="govuk-table__cell">Workplace Capability Assessment telephone assessment, Workplace Capability Assessment Complex Neuro</td>
-          <td class="govuk-table__cell"><a href="#">Deactivate</a></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Jane Smith</td>
-          <td class="govuk-table__cell">Face to face assessment, Personal Independence Payment telephone assessment, Workplace Capability Assessment telephone assessment</td>
-          <td class="govuk-table__cell" ><a href="#">Deactivate</a></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">{{ data['HCP-name'] }} </td>
-          <td class="govuk-table__cell">Face to face assessment, Personal Independence Payment telephone assessment, Workplace Capability Assessment telephone assessment</td>
-          <td class="govuk-table__cell" ><a href="deactivate-confirmation">Deactivate</a></td>
-        </tr>
+<div class="govuk-button-group">
+  <button class="govuk-button" data-module="govuk-button">
+    Continue
+  </button>
 
-      </tbody>
-      </table>
-
-      <br><br>
-      <a href="/current/HCP-admin/add-profile"><button class="govuk-button" data-module="govuk-button">Add a HCP</button></a>
-    </div>
-  </div>
-
-  </main>
+  <a class="govuk-link" href="">Cancel</a>
 </div>
+
+
+        </div>
+
+      </fieldset>
+    </div>
+
+</div>
+
+        </main>
+      </div>
 
 
 
@@ -140,13 +283,13 @@
 
                 <li class="govuk-footer__inline-list-item">
                   <a class="govuk-footer__link" href="https://govuk-prototype-kit.herokuapp.com/">
-                    GOV.UK Prototype Kit v9.10.1
+
                   </a>
                 </li>
 
                 <li class="govuk-footer__inline-list-item">
                   <a class="govuk-footer__link" href="/prototype-admin/clear-data">
-                    Clear data
+
                   </a>
                 </li>
 

@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
-<html lang="en" class="govuk-template">
+<html lang="en" class="govuk-template ">
   <head>
     <meta charset="utf-8">
     <title>
-      Handsworth healthcare professionals
+  Claimant details
 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#0b0c0c">
@@ -50,73 +51,76 @@
           </span>
       </a>
     </div>
-    <!-- <div class="govuk-header__content">
-      <a href="#" class="govuk-header__link govuk-header__link-service-name">
-        Service name
-      </a>
-    </div> -->
+
   </div>
 </header>
 
-<div class="govuk-width-container ">
+</style>
+
+
+      <div class="govuk-width-container ">
 
 <!-- <a href="start" class="govuk-back-link">Back</a> -->
 <a class="govuk-back-link docs-creator" href="javascript:history.go(-1)">Back</a>
 
-  <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
-    <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
+        <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
 
-    <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-    <div class="govuk-notification-banner__header">
-      <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-        Success
-      </h2>
-    </div>
-    <div class="govuk-notification-banner__content">
-      <h3 class="govuk-notification-banner__heading">
-        {{ data['HCP-name'] }} has been deactivated from this location
-      </h3>
-      <p class="govuk-body" style="max-width:100%;">
-      </p>
-    </div>
-    </div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+    <form class="form" action="/deactivate-hcp-answer" method="post">
 
-      <h1 class="govuk-heading-xl">
-        Healthcare professional profiles
-        <p class="govuk-hint"></p>
-      </h1>
 
-      <table class="govuk-table">
-      <thead class="govuk-table__head">
-      <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header" style="width:20%">Name</th>
-        <th scope="col" class="govuk-table__header" style="width:65%">Skills</th>
-        <th scope="col" class="govuk-table__header" style="width:15%">Actions</th>
-      </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Joe Bloggs</td>
-          <td class="govuk-table__cell">Workplace Capability Assessment telephone assessment, Workplace Capability Assessment Complex Neuro</td>
-          <td class="govuk-table__cell"><a href="#">Deactivate</a></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Jane Smith</td>
-          <td class="govuk-table__cell">Face to face assessment, Personal Independence Payment telephone assessment, Workplace Capability Assessment telephone assessment</td>
-          <td class="govuk-table__cell" ><a href="#">Deactivate</a></td>
-        </tr>
+      <h1 class="govuk-heading-l">Are you sure you want to deactivate {{ data['HCP-name'] }}?</h1>
 
-      </tbody>
-      </table>
+      {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 
-      <br><br>
-      <a href="/current/HCP-admin/add-profile"><button class="govuk-button" data-module="govuk-button">Add a HCP</button></a>
-    </div>
-  </div>
+      {{ govukInsetText({
+        text: "Make sure this healthcare professional does not have any assessments to do before deactivating them."
+      }) }}
 
-  </main>
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+      {{ govukRadios({
+        classes: "govuk-radios--inline",
+        idPrefix: "deactivate-hcp",
+        name: "deactivate-hcp",
+        fieldset: {
+          legend: {
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            value: "Yes",
+            text: "Yes"
+          },
+          {
+            value: "No",
+            text: "No"
+          }
+        ]
+      }) }}
+
+
+<br>
+<br>
+<div class="govuk-button-group">
+  <button class="govuk-button" data-module="govuk-button">
+    Continue
+  </button>
 </div>
+
+
+        </div>
+
+      </fieldset>
+    </div>
+
+</div>
+
+        </main>
+      </div>
 
 
 
@@ -132,13 +136,13 @@
 
                 <li class="govuk-footer__inline-list-item">
                   <a class="govuk-footer__link" href="https://govuk-prototype-kit.herokuapp.com/">
-                    GOV.UK Prototype Kit v9.10.1
+
                   </a>
                 </li>
 
                 <li class="govuk-footer__inline-list-item">
                   <a class="govuk-footer__link" href="/prototype-admin/clear-data">
-                    Clear data
+
                   </a>
                 </li>
 

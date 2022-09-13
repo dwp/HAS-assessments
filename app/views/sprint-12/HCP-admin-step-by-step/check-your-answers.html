@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>
-      Handsworth healthcare professionals
+  Check your answers - Healthcare professional profile
 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#0b0c0c">
@@ -63,59 +63,103 @@
 <!-- <a href="start" class="govuk-back-link">Back</a> -->
 <a class="govuk-back-link docs-creator" href="javascript:history.go(-1)">Back</a>
 
-  <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
-    <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
+<main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing " id="main-content" role="main">
 
-    <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-    <div class="govuk-notification-banner__header">
-      <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-        Success
-      </h2>
-    </div>
-    <div class="govuk-notification-banner__content">
-      <h3 class="govuk-notification-banner__heading">
-        {{ data['HCP-name'] }} has been deactivated from this location
-      </h3>
-      <p class="govuk-body" style="max-width:100%;">
-      </p>
-    </div>
-    </div>
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">
-        Healthcare professional profiles
-        <p class="govuk-hint"></p>
-      </h1>
+<h1 class="govuk-heading-xl">
+Check and confirm
+</h1>
 
-      <table class="govuk-table">
-      <thead class="govuk-table__head">
-      <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header" style="width:20%">Name</th>
-        <th scope="col" class="govuk-table__header" style="width:65%">Skills</th>
-        <th scope="col" class="govuk-table__header" style="width:15%">Actions</th>
-      </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Joe Bloggs</td>
-          <td class="govuk-table__cell">Workplace Capability Assessment telephone assessment, Workplace Capability Assessment Complex Neuro</td>
-          <td class="govuk-table__cell"><a href="#">Deactivate</a></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Jane Smith</td>
-          <td class="govuk-table__cell">Face to face assessment, Personal Independence Payment telephone assessment, Workplace Capability Assessment telephone assessment</td>
-          <td class="govuk-table__cell" ><a href="#">Deactivate</a></td>
-        </tr>
 
-      </tbody>
-      </table>
+</div>
+</div>
 
-      <br><br>
-      <a href="/current/HCP-admin/add-profile"><button class="govuk-button" data-module="govuk-button">Add a HCP</button></a>
-    </div>
+<div class="govuk-grid-row">
+
+
+<div class="govuk-grid-column-full">
+
+<p class="govuk-heading-m">
+Healthcare professional profile details &nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--hidden">
+
+
+<form class="form"  method="post" action="HCP-profiles-new-added">
+<div class="govuk-form-group">
+
+  <hr class="govuk-section-break govuk-section-break--m govuk-section-break--hidden">
+  <!-- <p><strong class="govuk-heading-m">Agent details</strong></p> -->
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Name
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['HCP-name'] }}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="HCP-name">
+        Change<span class="govuk-visually-hidden"> name</span>
+      </a>
+    </dd>
   </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Location
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['HCP-location'] }}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="HCP-location">
+        Change<span class="govuk-visually-hidden"> location</span>
+      </a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key" style="border-bottom:0px;">
+      Can they do physical assessments
+    </dt>
+    <dd class="govuk-summary-list__value" style="border-bottom:0px;">
+      {{ data['HCP-face-to-face'] }}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="HCP-face-to-face">
+        Change<span class="govuk-visually-hidden"> physical assessments</span>
+      </a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key" style="border-bottom:0px;">
+      Assessment types
+    </dt>
+    <dd class="govuk-summary-list__value" style="border-bottom:0px;">
+      {{ data['HCP-assessment-types'] }}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="HCP-assessment-types">
+        Change<span class="govuk-visually-hidden"> assessment types</span>
+      </a>
+    </dd>
+  </div>
+</dl>
 
-  </main>
+<br><br>
+<button class="govuk-button" data-module="govuk-button">Confirm and create profile</button>
+
+</div>
+</form>
+
+</div>
+</div>
+
+
+</main>
 </div>
 
 
