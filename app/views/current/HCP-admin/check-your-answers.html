@@ -69,18 +69,22 @@
 <div class="govuk-grid-column-full-width">
 
 <h1 class="govuk-heading-xl">
-Confirm healthcare professional details
+Check your answers
 </h1>
-
 
 </div>
 </div>
 
 <div class="govuk-grid-row">
 
-
 <div class="govuk-grid-column-full">
 
+  <p class="govuk-heading-m">
+    HCP details &nbsp;&nbsp;&nbsp;&nbsp;
+  <a class="govuk-link" href="add-profile" >
+    <span class="govuk-body">Change</span>
+  </a>
+  </p>
 
 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--hidden">
 
@@ -102,10 +106,18 @@ Confirm healthcare professional details
   </div>
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key" style="border-bottom:0px;">
-      Skills
+      WCA skills
     </dt>
     <dd class="govuk-summary-list__value" style="border-bottom:0px;">
-      {{ data['skills'] }}
+      {{ data['WCA-skills'] }}
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key" style="border-bottom:0px;">
+      PIP skills
+    </dt>
+    <dd class="govuk-summary-list__value" style="border-bottom:0px;">
+      {{ data['PIP-skills'] }}
     </dd>
   </div>
 </dl>
@@ -114,9 +126,6 @@ Confirm healthcare professional details
 <button class="govuk-button" data-module="govuk-button">Confirm and add HCP</button>
 
 </div>
-<a class="govuk-link" href="add-profile" >
-  <span class="govuk-body">Or change details</span>
-</a>
 
 </form>
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>
-      Add healthcare professional profile
+      Healthcare professional profiles
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#0b0c0c">
@@ -72,40 +72,74 @@
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-three-quarters">
 
+            <h1 class="govuk-heading-xl">
+              Add HCP to Handsworth, Birmingham
+            </h1>
+
+
+      <br>
+        <div class="govuk-form-group">
+        <label class="govuk-fieldset__legend--s govuk-!-font-weight-bold" for="HCP-name">
+          Full name
+        </label>
+        <p class="govuk-hint"></p>
+
+        <input class="govuk-input govuk-!-width-two-thirds" id="HCP-name" name="HCP-name" type="text" value=""></div>
+
+        </div>
+        </div>
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--hidden">
+        <div class="govuk-grid-column-one-half" style="padding-left:0px;">
+
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
             {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
             {{ govukCheckboxes({
-              idPrefix: "HCP-assessment-types",
-              name: "HCP-assessment-types",
+              idPrefix: "Skills",
+              name: "Skills",
+              classes: "govuk-checkboxes--small",
               fieldset: {
                 legend: {
-                  text: "Which types of assessment can they do?",
+                  text: "Skills",
                   isPageHeading: true,
-                  classes: "govuk-fieldset__legend--l"
+                  classes: "govuk-fieldset__legend--m"
                 }
-              },
-              hint: {
-                text: "Select all that apply."
               },
               items: [
                 {
-                  value: "WCA",
-                  text: "Workplace Capability Assessment"
+                  value: "WCA TA",
+                  text: "WCA TA"
+                },
+                {
+                  value: "WCA F2F",
+                  text: "WCA F2F"
                 },
                 {
                   value: "WCA CN",
-                  text: "Workplace Capability Assessment Complex Neuro"
+                  text: "WCA CN"
                 },
                 {
-                  value: "PIP",
-                  text: "Personal Independence Payment"
+                  value: "PIP TA",
+                  text: "PIP TA"
+                },
+                {
+                  value: "PIP F2F",
+                  text: "PIP F2F"
                 }
               ]
             }) }}
 
             </fieldset>
           </div>
-        </div>
+          </div>
 
         </div>
         </div>

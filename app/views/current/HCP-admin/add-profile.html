@@ -73,12 +73,9 @@
           <div class="govuk-grid-column-three-quarters">
 
             <h1 class="govuk-heading-xl">
-              Add healthcare professional profile for Handsworth
+              Add HCP to Handsworth, Birmingham
             </h1>
 
-            <div class="govuk-inset-text">
-              You are adding this healthcare professional to Handsworth, Birmingham. Return to select a location to add to a different location. 
-            </div>
 
       <br>
         <div class="govuk-form-group">
@@ -106,32 +103,28 @@
             {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
             {{ govukCheckboxes({
-              idPrefix: "skills",
-              name: "skills",
+              idPrefix: "WCA-skills",
+              name: "WCA-skills",
               classes: "govuk-checkboxes--small",
               fieldset: {
                 legend: {
-                  text: "Skills",
+                  text: "WCA skills",
                   isPageHeading: true,
                   classes: "govuk-fieldset__legend--m"
                 }
               },
               items: [
                 {
-                  value: "Face to face assessment",
-                  text: "Face to face assessment"
+                  value: "WCA TA",
+                  text: "WCA TA"
                 },
                 {
-                  value: "Personal Independence Payment telephone assessment",
-                  text: "Personal Independence Payment telephone assessment"
+                  value: "WCA F2F",
+                  text: "WCA F2F"
                 },
                 {
-                  value: "Work Capability Assessment telephone assessment",
-                  text: "Work Capability Assessment telephone assessment"
-                },
-                {
-                  value: "Work Capability Assessment Complex Neuro",
-                  text: "Work Capability Assessment Complex Neuro"
+                  value: "WCA CN",
+                  text: "WCA CN"
                 }
               ]
             }) }}
@@ -139,6 +132,41 @@
             </fieldset>
           </div>
           </div>
+
+          <div class="govuk-grid-column-one-half" style="padding-left:0px;">
+
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+              {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+              {{ govukCheckboxes({
+                idPrefix: "PIP-skills",
+                name: "PIP-skills",
+                classes: "govuk-checkboxes--small",
+                fieldset: {
+                  legend: {
+                    text: "PIP skills",
+                    isPageHeading: true,
+                    classes: "govuk-fieldset__legend--m"
+                  }
+                },
+                items: [
+                  {
+                    value: "PIP TA",
+                    text: "PIP TA"
+                  },
+                  {
+                    value: "PIP F2F",
+                    text: "PIP F2F"
+                  }
+                ]
+              }) }}
+
+              </fieldset>
+            </div>
+            </div>
 
         </div>
         </div>
