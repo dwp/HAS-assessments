@@ -223,15 +223,22 @@ max-width:1160px !important;}
   </dl>
 </section>
 
-  <div class="govuk-width-container ">
+
+
+
+
+
+
+      <div class="govuk-width-container ">
 
 <!-- <a href="start" class="govuk-back-link">Back</a> -->
 <a class="govuk-back-link docs-creator" href="javascript:history.go(-1)">Back</a>
 
         <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
 
+
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full-from-desktop">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
     <form class="form" action="more-info" method="post">
 
     <div class="govuk-form-group">
@@ -241,72 +248,37 @@ max-width:1160px !important;}
             Select a date and time for the assessment
           </h1>
         </legend>
-        <br>
-
-        <table class="govuk-table">
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header govuk-!-width-one-third">Date</th>
-              <th scope="col" class="govuk-table__header govuk-!-width-two-thirds">Time</th>
-              <th scope="col" class="govuk-table__header govuk-!-width-one-fifth">Select</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Monday 24 October</th>
-              <td class="govuk-table__cell">9am</td>
-              <td class="govuk-table__cell"><a href="more-info>">Select</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Monday 24 October</th>
-              <td class="govuk-table__cell">1pm</td>
-              <td class="govuk-table__cell"><a href="more-info>">Select</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Tuesday 25 October</th>
-              <td class="govuk-table__cell">9am</td>
-              <td class="govuk-table__cell"><a href="more-info>">Select</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Tuesday 25 October</th>
-              <td class="govuk-table__cell">1pm</td>
-              <td class="govuk-table__cell"><a href="more-info>">Select</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Wednesday 26 October</th>
-              <td class="govuk-table__cell">9am</td>
-              <td class="govuk-table__cell"><a href="more-info>">Select</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Wednesday 26 October</th>
-              <td class="govuk-table__cell">1pm</td>
-              <td class="govuk-table__cell"><a href="more-info>">Select</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Thursday 27 October</th>
-              <td class="govuk-table__cell">9am</td>
-              <td class="govuk-table__cell"><a href="more-info>">Select</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Thursday 27 October</th>
-              <td class="govuk-table__cell">1pm</td>
-              <td class="govuk-table__cell"><a href="more-info>">Select</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Friday 28 October</th>
-              <td class="govuk-table__cell">9am</td>
-              <td class="govuk-table__cell"><a href="more-info>">Select</a></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Friday 28 October</th>
-              <td class="govuk-table__cell">1pm</td>
-              <td class="govuk-table__cell"><a href="more-info>">Select</a></td>
-            </tr>
-          </tbody>
-        </table>
-
-        </div>
-      </div>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+            <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+              Thursday 25 August, 9am
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+            <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+              Friday 26 August, 1pm
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+            <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+              Monday 29 August, 1pm
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+            <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+              Thursday 1 September, 9am
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+            <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+              Friday 2 September, 1pm
+            </label>
+          </div>
 
 <br>
 <br>
