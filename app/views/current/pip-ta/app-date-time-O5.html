@@ -253,144 +253,515 @@ max-width:1160px !important;}
             </fieldset>
           </div>
 
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Time of day</legend>
-              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="morning" name="benefit-type" type="checkbox" value="morning">
-                  <label class="govuk-label govuk-checkboxes__label" for="morning">Morning (20)</label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="afternoon" name="benefit-type" type="checkbox" value="afternoon">
-                  <label class="govuk-label govuk-checkboxes__label" for="afternoon">Afternoon (30)</label>
-                </div>
-              </div>
-            </fieldset>
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Time of day</legend>
+        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="morning" name="benefit-type" type="checkbox" value="morning">
+            <label class="govuk-label govuk-checkboxes__label" for="morning">Morning (20)</label>
           </div>
-      
-          <button class="govuk-button govuk-button--secondary govuk-!-Marchgin-bottom-8">Apply filters</button>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="afternoon" name="benefit-type" type="checkbox" value="afternoon">
+            <label class="govuk-label govuk-checkboxes__label" for="afternoon">Afternoon (30)</label>
+          </div>
         </div>
+      </fieldset>
     </div>
 
-      <div class="govuk-grid-column-three-quarters">
-      <h1 class="govuk-heading-l">Choose a date and time for the assessment</h1>
-      <p id="filter-playback" class="govuk-!-margin-bottom-2">50 assessment appointments</p>
-      <div id="js-facet-tag-wrapper" class="facet-tags__container" aria-live="assertive">
-        <span class="govuk-visually-hidden"></span>
-      </div>
-
-    <table data-module="moj-sortable-table" class="govuk-table">
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">Date</th>
-          <th scope="col" class="govuk-table__header" aria-sort="none">Time</th>
-          <th scope="col" class="govuk-table__header" aria-sort="none" >Slots available</th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row srel esa handsworth">
-          <td class="govuk-table__cell"><a href="more-info" aria-describedby="more-info">Monday 24 October</a></td>
-          <td class="govuk-table__cell" data-sort-value="220708">9am</td>
-          <td class="govuk-table__cell" data-sort-value="1">2</td>
-        </tr>
-        <tr class="govuk-table__row srel esa handsworth">
-          <td class="govuk-table__cell"><a href="more-info" aria-describedby="more-info">Monday 24 October</a></td>
-          <td class="govuk-table__cell" data-sort-value="220708">11am</td>
-          <td class="govuk-table__cell" data-sort-value="1">1</td>
-        </tr>
-        <tr class="govuk-table__row srel esa handsworth">
-          <td class="govuk-table__cell"><a href="more-info" aria-describedby="more-info">Monday 24 October</a></td>
-          <td class="govuk-table__cell" data-sort-value="220708">1pm</td>
-          <td class="govuk-table__cell" data-sort-value="1">3</td>
-        </tr>
-        <tr class="govuk-table__row srel esa handsworth">
-          <td class="govuk-table__cell"><a href="more-info" aria-describedby="more-info">Monday 24 October</a></td>
-          <td class="govuk-table__cell" data-sort-value="220708">3pm</td>
-          <td class="govuk-table__cell" data-sort-value="1">2</td>
-        </tr>
-        <tr class="govuk-table__row srel esa handsworth">
-          <td class="govuk-table__cell"><a href="more-info" aria-describedby="more-info">Tuesday 25 October</a></td>
-          <td class="govuk-table__cell" data-sort-value="220708">9am</td>
-          <td class="govuk-table__cell" data-sort-value="1">4</td>
-        </tr>
-        <tr class="govuk-table__row srel esa handsworth">
-          <td class="govuk-table__cell"><a href="more-info" aria-describedby="more-info">Tuesday 25 October</a></td>
-          <td class="govuk-table__cell" data-sort-value="220708">11am</td>
-          <td class="govuk-table__cell" data-sort-value="1">3</td>
-        </tr>
-        <tr class="govuk-table__row srel esa handsworth">
-          <td class="govuk-table__cell"><a href="more-info" aria-describedby="more-info">Tuesday 25 October</a></td>
-          <td class="govuk-table__cell" data-sort-value="220708">1pm</td>
-          <td class="govuk-table__cell" data-sort-value="1">2</td>
-        </tr>
-        <tr class="govuk-table__row srel esa handsworth">
-          <td class="govuk-table__cell"><a href="more-info" aria-describedby="more-info">Tuesday 25 October</a></td>
-          <td class="govuk-table__cell" data-sort-value="220708">3pm</td>
-          <td class="govuk-table__cell" data-sort-value="1">1</td>
-        </tr>
-        <tr class="govuk-table__row srel esa handsworth">
-          <td class="govuk-table__cell"><a href="more-info" aria-describedby="more-info">Wednesday 26 October</a></td>
-          <td class="govuk-table__cell" data-sort-value="220708">9am</td>
-          <td class="govuk-table__cell" data-sort-value="1">4</td>
-        </tr>
-        <tr class="govuk-table__row srel esa handsworth">
-          <td class="govuk-table__cell"><a href="more-info" aria-describedby="more-info">Wednesday 26 October</a></td>
-          <td class="govuk-table__cell" data-sort-value="220708">11am</td>
-          <td class="govuk-table__cell" data-sort-value="1">4</td>
-        </tr>
-        <tr class="govuk-table__row srel esa handsworth">
-          <td class="govuk-table__cell"><a href="more-info" aria-describedby="more-info">Wednesday 26 October</a></td>
-          <td class="govuk-table__cell" data-sort-value="220708">1pm</td>
-          <td class="govuk-table__cell" data-sort-value="1">3</td>
-        </tr>
-        <tr class="govuk-table__row srel esa handsworth">
-          <td class="govuk-table__cell"><a href="more-info" aria-describedby="more-info">Wednesday 26 October</a></td>
-          <td class="govuk-table__cell" data-sort-value="220708">3pm</td>
-          <td class="govuk-table__cell" data-sort-value="1">3</td>
-        </tr>
-
-      </tbody>
-    </table>
-          <nav class="govuk-pagination" role="navigation" aria-label="results">
-            <ul class="govuk-pagination__list">
-              <li class="govuk-pagination__item govuk-pagination__item--current">
-                <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
-                  1
-                </a>
-              </li>
-              <li class="govuk-pagination__item">
-                <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">
-                  2
-                </a>
-              </li>
-              <li class="govuk-pagination__item">
-                <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
-                  3
-                </a>
-              </li>
-            </ul>
-            <div class="govuk-pagination__next">
-              <a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span class="govuk-pagination__link-title">Next</span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
-                  <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
-                </svg></a>
-            </div>
-          </nav>
-
-          <br>
-          <br>
-          <div class="govuk-button-group">
-            <button class="govuk-button" data-module="govuk-button">
-              Continue
-            </button>
-            <a class="govuk-link" href="cancel-confirmation">Cancel</a>
-          </div>
-          </div>
-        </fieldset>
-      </div>
+    <button class="govuk-button govuk-button--secondary govuk-!-Marchgin-bottom-8">Apply filters</button>
     </div>
   </div>
 
+  <div class="govuk-grid-column-three-quarters">
+    <h1 class="govuk-heading-l">Select a date and time for the assessment</h1>
+    <p id="filter-playback" class="govuk-!-margin-bottom-2">50 assessments available in the next 28 days.</p>
+    <div id="js-facet-tag-wrapper" class="facet-tags__container" aria-live="assertive">
+      <span class="govuk-visually-hidden"></span>
+    </div>
+
+      <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                Monday 24 October
+              </span>
+            </h2>
+            <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+              4 assessments available.
+            </div>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                      9am
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                      11am
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                      1pm
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                      3pm
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <button class="govuk-button" data-module="govuk-button">
+              Continue
+            </button>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                Tuesday 25 October
+              </span>
+            </h2>
+            <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+              10 assessments available.
+            </div>
+          </div>
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                      9am
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                      11am
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                      1pm
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                      3pm
+                    </label>
+                  </div>
+                </div>
+            
+              </fieldset>
+            </div>
+            <button class="govuk-button" data-module="govuk-button">
+              Continue
+            </button>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                Wednesday 26 October
+              </span>
+            </h2>
+            <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+              14 assessments available.
+            </div>
+          </div>
+          <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                      9am
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                      11am
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                      1pm
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                      3pm
+                    </label>
+                  </div>
+                </div>
+            
+              </fieldset>
+            </div>
+            <button class="govuk-button" data-module="govuk-button">
+              Continue
+            </button>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                Thursday 27 October
+              </span>
+            </h2>
+            <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+              12 assessments available.
+            </div>
+          </div>
+          <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                      9am
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                      11am
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                      1pm
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                      3pm
+                    </label>
+                  </div>
+                </div>
+            
+              </fieldset>
+            </div>
+            <button class="govuk-button" data-module="govuk-button">
+              Continue
+            </button>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                Friday 28 October
+              </span>
+            </h2>
+            <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+              15 assessments available.
+            </div>
+          </div>
+          <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                      9am
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                      11am
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                      1pm
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                      3pm
+                    </label>
+                  </div>
+                </div>
+            
+              </fieldset>
+            </div>
+            <button class="govuk-button" data-module="govuk-button">
+              Continue
+            </button>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                Monday 31 October
+              </span>
+            </h2>
+            <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+              4 assessments available.
+            </div>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                      9am
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                      11am
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                      1pm
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                      3pm
+                    </label>
+                  </div>
+                </div>
+            
+              </fieldset>
+            </div>
+            <button class="govuk-button" data-module="govuk-button">
+              Continue
+            </button>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                Tuesday 1 November
+              </span>
+            </h2>
+            <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+              10 assessments available.
+            </div>
+          </div>
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                      9am
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                      11am
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                      1pm
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                      3pm
+                    </label>
+                  </div>
+                </div>
+            
+              </fieldset>
+            </div>
+            <button class="govuk-button" data-module="govuk-button">
+              Continue
+            </button>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                Wednesday 2 November
+              </span>
+            </h2>
+            <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+              14 assessments available.
+            </div>
+          </div>
+          <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                      9am
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                      11am
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                      1pm
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                      3pm
+                    </label>
+                  </div>
+                </div>
+            
+              </fieldset>
+            </div>
+            <button class="govuk-button" data-module="govuk-button">
+              Continue
+            </button>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                Thursday 3 November
+              </span>
+            </h2>
+            <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+              12 assessments available.
+            </div>
+          </div>
+          <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                      9am
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                      11am
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                      1pm
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                      3pm
+                    </label>
+                  </div>
+                </div>
+            
+              </fieldset>
+            </div>
+            <button class="govuk-button" data-module="govuk-button">
+              Continue
+            </button>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                Friday 4 November
+              </span>
+            </h2>
+            <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+              15 assessments available.
+            </div>
+          </div>
+          <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                      9am
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                      11am
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                      1pm
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                      3pm
+                    </label>
+                  </div>
+                </div>
+            
+              </fieldset>
+            </div>
+            <button class="govuk-button" data-module="govuk-button">
+              Continue
+            </button>
+        </div>
+    </div>
+  <div class="govuk-button-group">
+    <button class="govuk-button" data-module="govuk-button">
+      Continue
+    </button>
+    <a class="govuk-link" href="cancel-confirmation">Cancel</a>
+  </div>
+  
 </main>
 
 <footer class="govuk-footer " role="contentinfo">

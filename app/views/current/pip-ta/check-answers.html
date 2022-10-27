@@ -313,7 +313,7 @@ max-width:1160px !important;}
                 Change<span class="govuk-visually-hidden"> what language of interpreter</span>
               </a>
             </dd>
-          </div>
+            </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
                 Same sex healthcare professional
@@ -337,6 +337,19 @@ max-width:1160px !important;}
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="UCB-marker">
                   Change<span class="govuk-visually-hidden"> if the claimant displays unreasonable behaviour</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                UCB detail
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['ucb-detail'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="UCB-marker">
+                  Change<span class="govuk-visually-hidden"> unreasonable claimant behaviour detail</span>
                 </a>
               </dd>
             </div>
@@ -371,7 +384,7 @@ max-width:1160px !important;}
                 Date and time
               </dt>
               <dd class="govuk-summary-list__value">
-                Thursday 25 August, 9am
+                Monday 31 October, 9am
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="app-date-time">
@@ -397,7 +410,7 @@ max-width:1160px !important;}
                 Case manager name
               </dt>
               <dd class="govuk-summary-list__value">
-                {{ data['case-manager-name'] }}
+                {{ data['full-name'] }}
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="case-manager-name">
@@ -405,9 +418,7 @@ max-width:1160px !important;}
                 </a>
               </dd>
             </div>
-
-
-                      </dl>
+          </dl>
 
 
           <form action="confirmation" method="post" novalidate>

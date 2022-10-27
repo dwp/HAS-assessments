@@ -239,32 +239,22 @@ max-width:1160px !important;}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds-from-desktop">
-    <form class="form" action="/ucb-answer" method="post">
+    <form class="form" action="claimant-support" method="post">
 
-      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+      {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
 
-  {{ govukRadios({
-    classes: "govuk-radios--inline",
-    idPrefix: "UCB-marker",
-    name: "UCB-marker",
-    fieldset: {
-      legend: {
-        text: "Does this claimant display unreasonable behaviour?",
-        isPageHeading: true,
-        classes: "govuk-fieldset__legend--l"
-      }
-    },
-    items: [
-      {
-        value: "Yes",
-        text: "Yes"
-      },
-      {
-        value: "No",
-        text: "No"
-      }
-    ]
-  }) }}
+      {{ govukTextarea({
+        name: "ucb-detail",
+        id: "ucb-detail",
+        label: {
+          text: "Describe the problems with the claimant's behaviour",
+          classes: "govuk-label--l",
+          isPageHeading: true
+        },
+        hint: {
+          text: "This claimant has an unreasonable claimant behavious (UCB) flag. Entering further details will help the HCP complete the assessment."
+        }
+      }) }}
 
 
 <br>

@@ -23,6 +23,23 @@ router.post('/interpreter-answer', function (req, res) {
 
 })
 
+// Run this code when a form is submitted to 'ucb-answer'
+router.post('/ucb-answer', function (req, res) {
+
+  // Make a variable and give it the value from 'UCB-marker'
+  var ucbYesNo = req.session.data['UCB-marker']
+
+  // Check whether the variable matches a condition
+  if (ucbYesNo == "Yes"){
+    // Send user to what language page
+    res.redirect('/current/pip-ta/UCB-detail')
+  } else {
+    // Send user to next page
+    res.redirect('/current/pip-ta/claimant-support')
+  }
+
+})
+
 // Run this code when a form is submitted to 'cancel-answer'
 router.post('/cancel-answer', function (req, res) {
 
