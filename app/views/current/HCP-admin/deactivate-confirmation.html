@@ -70,12 +70,12 @@
     <form class="form" action="/deactivate-hcp-answer" method="post">
 
 
-      <h1 class="govuk-heading-l">Are you sure you want to deactivate {{ data['HCP-name'] }}?</h1>
+      <h1 class="govuk-heading-l">Are you sure you want to remove Joe Bloggs?</h1>
 
       {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 
       {{ govukInsetText({
-        text: "Make sure you have reassigned this HCPs assessments before deactivating them."
+        text: "Make sure you have reassigned this HCPs assessments before removing them."
       }) }}
 
       {% from "govuk/components/radios/macro.njk" import govukRadios %}

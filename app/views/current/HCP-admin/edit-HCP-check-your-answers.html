@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>
-  Manage assessment bookings
-  </title>
+  Healthcare professional profiles
+</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#0b0c0c">
 
@@ -58,36 +58,84 @@
   </div>
 </header>
 
-
-
-
 <div class="govuk-width-container ">
 
 <!-- <a href="start" class="govuk-back-link">Back</a> -->
 <a class="govuk-back-link docs-creator" href="javascript:history.go(-1)">Back</a>
 
-  <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
-        <div class="dwp-card dwp-card--clickable">
-          <div class="dwp-card__content">
-            <h2 class="dwp-card__heading dwp-heading-m">
-              <a class="dwp-card__link" href="#">View or cancel a booked assessment</a>
-            </h2>
-            <p class="dwp-card__description"></p>
-          </div>
-        </div>
-        <div class="dwp-card dwp-card--clickable">
-          <div class="dwp-card__content">
-            <h2 class="dwp-card__heading dwp-heading-m">
-              <a class="dwp-card__link" href="#">Assign a healthcare professional</a>
-            </h2>
-            <p class="dwp-card__description"></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
+<main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing " id="main-content" role="main">
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full-width">
+
+<h1 class="govuk-heading-xl">
+Check your answers
+</h1>
+
+</div>
+</div>
+
+<div class="govuk-grid-row">
+
+<div class="govuk-grid-column-full">
+
+  <p class="govuk-heading-m">
+    HCP details &nbsp;&nbsp;&nbsp;&nbsp;
+  <a class="govuk-link" href="existing-HCP-edit" >
+    <span class="govuk-body">Change</span>
+  </a>
+  </p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--hidden">
+
+
+<form class="form"  method="post" action="HCP-profiles-updated">
+<div class="govuk-form-group">
+
+  <hr class="govuk-section-break govuk-section-break--m govuk-section-break--hidden">
+  <!-- <p><strong class="govuk-heading-m">Agent details</strong></p> -->
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Name
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['HCP-name'] }}
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key" style="border-bottom:0px;">
+      WCA skills
+    </dt>
+    <dd class="govuk-summary-list__value" style="border-bottom:0px;">
+      {{ data['WCA-skills'] }}
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key" style="border-bottom:0px;">
+      PIP skills
+    </dt>
+    <dd class="govuk-summary-list__value" style="border-bottom:0px;">
+      {{ data['PIP-skills'] }}
+    </dd>
+  </div>
+</dl>
+
+<br><br>
+<button class="govuk-button" data-module="govuk-button">Confirm and update HCP</button>
+
+</div>
+
+</form>
+
+<br><br>
+
+</div>
+</div>
+
+
+</main>
 </div>
 
 

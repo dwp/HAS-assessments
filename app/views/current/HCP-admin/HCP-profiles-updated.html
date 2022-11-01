@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>
-      Healthcare professional profiles
-    </title>
+  Healthcare professional profiles
+</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#0b0c0c">
 
@@ -64,91 +64,58 @@
 <a class="govuk-back-link docs-creator" href="javascript:history.go(-1)">Back</a>
 
   <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+
     <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
 
+      <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+    <div class="govuk-notification-banner__header">
+      <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+        Success
+      </h2>
+    </div>
+    <div class="govuk-notification-banner__content">
+      <h3 class="govuk-notification-banner__heading">
+        Joe Bloggs updated
+      </h3>
+      <p class="govuk-body" style="max-width:100%;">
+      <strong>Name: </strong> {{ data['HCP-name'] }} <br>
+      <strong>WCA skills: </strong> {{ data['WCA-skills'] }}<br>
+      <strong>PIP skills: </strong> {{ data['PIP-skills'] }}<br>
+      </p>
+      </div>
+    </div>
 
-      <form class="form" action="check-your-answers" method="post">
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-three-quarters">
-
-            <h1 class="govuk-heading-xl">
-              Add HCP to Handsworth, Birmingham
-            </h1>
-
-
-      <br>
-        <div class="govuk-form-group">
-        <label class="govuk-fieldset__legend--s govuk-!-font-weight-bold" for="HCP-name">
-          Full name
-        </label>
+      <h1 class="govuk-heading-xl">
+        HCPs in Handsworth, Birmingham
         <p class="govuk-hint"></p>
+      </h1>
 
-        <input class="govuk-input govuk-!-width-two-thirds" id="HCP-name" name="HCP-name" type="text" value=""></div>
+      <table class="govuk-table">
+      <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header" style="width:20%">Name</th>
+        <th scope="col" class="govuk-table__header" style="width:60%">Skills</th>
+        <th scope="col" class="govuk-table__header" style="width:20%">Actions</th>
+      </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Joe Bloggs</td>
+          <td class="govuk-table__cell">WCA TA, WCA CN</td>
+          <td class="govuk-table__cell"><a href="#">View details or edit</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Jane Smith</td>
+          <td class="govuk-table__cell">PIP F2F, PIP TA, WCA F2F, WCA TA</td>
+          <td class="govuk-table__cell" ><a href="#">View details or edit</a></td>
+        </tr>
 
-        </div>
-        </div>
+      </tbody>
+      </table>
 
-        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-        <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
-            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--hidden">
-        <div class="govuk-grid-column-one-half" style="padding-left:0px;">
-
-
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
-          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-            {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
-
-            {{ govukCheckboxes({
-              idPrefix: "Skills",
-              name: "Skills",
-              classes: "govuk-checkboxes--small",
-              fieldset: {
-                legend: {
-                  text: "Skills",
-                  isPageHeading: true,
-                  classes: "govuk-fieldset__legend--m"
-                }
-              },
-              items: [
-                {
-                  value: "WCA TA",
-                  text: "WCA TA"
-                },
-                {
-                  value: "WCA F2F",
-                  text: "WCA F2F"
-                },
-                {
-                  value: "WCA CN",
-                  text: "WCA CN"
-                },
-                {
-                  value: "PIP TA",
-                  text: "PIP TA"
-                },
-                {
-                  value: "PIP F2F",
-                  text: "PIP F2F"
-                }
-              ]
-            }) }}
-
-            </fieldset>
-          </div>
-          </div>
-
-        </div>
-        </div>
-
-        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--hidden">
-
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
-    </form>
-
+      <br><br>
+      <a href="add-profile"><button class="govuk-button" data-module="govuk-button">Add HCP</button></a>
     </div>
   </div>
 

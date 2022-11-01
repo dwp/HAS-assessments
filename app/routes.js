@@ -40,6 +40,23 @@ router.post('/ucb-answer', function (req, res) {
 
 })
 
+// Run this code when a form is submitted to 'app-preferences'
+router.post('/app-preferences', function (req, res) {
+
+  // Make a variable and give it the value from 'UCB-marker'
+  var appprefsYesNo = req.session.data['app-preferences']
+
+  // Check whether the variable matches a condition
+  if (appprefsYesNo == "Yes"){
+    // Send user to what language page
+    res.redirect('/current/pip-ta/app-date-time-O6-page-3')
+  } else {
+    // Send user to next page
+    res.redirect('/current/pip-ta/app-date-time-O6-page-2')
+  }
+
+})
+
 // Run this code when a form is submitted to 'cancel-answer'
 router.post('/cancel-answer', function (req, res) {
 

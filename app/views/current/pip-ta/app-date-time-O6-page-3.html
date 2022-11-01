@@ -239,17 +239,117 @@ max-width:1160px !important;}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds-from-desktop">
-    <form class="form" action="more-info" method="post">
+    <form class="form" action="app-date-time-O1" method="post">
 
-      <h1 class="govuk-heading-l">Next available assessment</h1>
+      <h1 class="govuk-heading-l">Appointment preferences</h1>
 
-      <h2 class="govuk-heading-m">
-        Monday 24 October, 9am
-      </h2>
-      <p><a href="app-date-time-O1" class="govuk-link">Choose another date and time</a>.</p>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h2 class="govuk-heading-m">
+              Date
+            </h2>
+          </legend>
+          <div id="passport-issued-hint" class="govuk-hint">
+            For example, 27 3 2007
+          </div>
+          <div class="govuk-date-input" id="passport-issued">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+      
+        </fieldset>
+      </div>
 
-<br>
-<br>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Day of week
+            </h1>
+          </legend>
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="day-of-week" name="day-of-week" type="checkbox" value="monday">
+              <label class="govuk-label govuk-checkboxes__label" for="day-of-week">
+                Monday
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="day-of-week-2" name="day-of-week" type="checkbox" value="tuesday">
+              <label class="govuk-label govuk-checkboxes__label" for="day-of-week-2">
+                Tuesday
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="day-of-week-3" name="day-of-week" type="checkbox" value="wednesday">
+              <label class="govuk-label govuk-checkboxes__label" for="day-of-week-3">
+                Wednesday
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="day-of-week-4" name="day-of-week" type="checkbox" value="thursday">
+              <label class="govuk-label govuk-checkboxes__label" for="day-of-week-4">
+                Thursday
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="day-of-week-5" name="day-of-week" type="checkbox" value="friday">
+              <label class="govuk-label govuk-checkboxes__label" for="day-of-week-5">
+                Friday
+              </label>
+            </div>
+          </div>
+      
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Time of day
+            </h1>
+          </legend>
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="time-of-day" name="time-of-day" type="checkbox" value="morning">
+              <label class="govuk-label govuk-checkboxes__label" for="time-of-day">
+                Morning
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="time-of-day-2" name="time-of-day" type="checkbox" value="afternoon">
+              <label class="govuk-label govuk-checkboxes__label" for="time-of-day-2">
+                Afternoon
+              </label>
+            </div>
+      
+        </fieldset>
+      </div>
+
 <div class="govuk-button-group">
   <button class="govuk-button" data-module="govuk-button">
     Continue
