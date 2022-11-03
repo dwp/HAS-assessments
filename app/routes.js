@@ -113,7 +113,7 @@ router.post('/cancel-wca-answer', function (req, res) {
 // Run this code when a form is submitted to 'cancel-answer'
 router.post('/deactivate-hcp-answer', function (req, res) {
 
-  // Make a variable and give it the value from 'how-many-balls'
+  // Make a variable and give it the value from 'deactivate-HCP'
   var deactivateHCPYesNo = req.session.data['deactivate-hcp']
 
   // Check whether the variable matches a condition
@@ -122,7 +122,7 @@ router.post('/deactivate-hcp-answer', function (req, res) {
     res.redirect('/current/HCP-admin/HCP-profiles-deactivated-success')
   } else {
     // Send user to previous page
-    res.redirect('javascript:history.go(-1)')
+    res.redirect('/current/HCP-admin/existing-HCP-view')
   }
 
 })

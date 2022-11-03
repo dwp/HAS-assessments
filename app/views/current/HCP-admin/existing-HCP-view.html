@@ -66,10 +66,10 @@
 <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing " id="main-content" role="main">
 
 <div class="govuk-grid-row">
-<div class="govuk-grid-column-full-width">
+<div class="govuk-grid-column-full">
 
 <h1 class="govuk-heading-xl">
-Joe Bloggs
+HCP details
 </h1>
 
 </div>
@@ -77,57 +77,63 @@ Joe Bloggs
 
 <div class="govuk-grid-row">
 
-<div class="govuk-grid-column-full">
-
-  <p class="govuk-heading-m">
-    HCP details &nbsp;&nbsp;&nbsp;&nbsp;
-  <a class="govuk-link" href="existing-HCP-edit" >
-    <span class="govuk-body">Change</span>
-  </a>
-  </p>
-
-<hr class="govuk-section-break govuk-section-break--m govuk-section-break--hidden">
-
-
-<form class="form"  method="post" action="deactivate-confirmation">
-<div class="govuk-form-group">
+<div class="govuk-grid-column-two-thirds">
 
   <hr class="govuk-section-break govuk-section-break--m govuk-section-break--hidden">
-  <!-- <p><strong class="govuk-heading-m">Agent details</strong></p> -->
 
-<dl class="govuk-summary-list">
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Name
-    </dt>
-    <dd class="govuk-summary-list__value">
-      Joe Bloggs
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key" style="border-bottom:0px;">
-      WCA skills
-    </dt>
-    <dd class="govuk-summary-list__value" style="border-bottom:0px;">
-      WCA TA, WCA CN
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key" style="border-bottom:0px;">
-      PIP skills
-    </dt>
-    <dd class="govuk-summary-list__value" style="border-bottom:0px;">
-      None added
-    </dd>
-  </div>
-</dl>
 
-<br><br>
-<button class="govuk-button govuk-button--warning" data-module="govuk-button">
-  Remove HCP
-</button>
+  <div class="govuk-form-group">
 
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--hidden">
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Joe Bloggs
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key" style="border-bottom:0px;">
+          WCA skills
+        </dt>
+        <dd class="govuk-summary-list__value" style="border-bottom:0px;">
+          WCA TA, WCA CN
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key" style="border-bottom:0px;">
+          PIP skills
+        </dt>
+        <dd class="govuk-summary-list__value" style="border-bottom:0px;">
+          None selected
+        </dd>
+      </div>
+    </dl>
+  </div>
 </div>
+  <div class="govuk-grid-column-one-third">
+
+    <aside class="app-related-items" role="complementary">
+      <h2 class="govuk-heading-m" id="subsection-title">
+        Actions
+      </h2>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list">
+          <li>
+            <a href="existing-HCP-edit.html">Edit</a>
+          </li>
+          <li>
+            <a href="deactivate-confirmation.html">Remove</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+  </div>
+
 
 </form>
 
@@ -136,13 +142,10 @@ Joe Bloggs
 </div>
 </div>
 
-
 </main>
 </div>
 
-
-
-    <footer class="govuk-footer " role="contentinfo">
+  <footer class="govuk-footer " role="contentinfo">
   <div class="govuk-width-container ">
 
     <div class="govuk-footer__meta">
