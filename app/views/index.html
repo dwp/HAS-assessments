@@ -11,581 +11,400 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+<link href="/public/stylesheets/application.css" media="all" rel="stylesheet" type="text/css"/>
 
-      <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/govuk/assets/images/favicon.ico" type="image/x-icon">
-      <link rel="mask-icon" href="/govuk/assets/images/govuk-mask-icon.svg" color="#0b0c0c">
-      <link rel="apple-touch-icon" sizes="180x180" href="/govuk/assets/images/govuk-apple-touch-icon-180x180.png">
-      <link rel="apple-touch-icon" sizes="167x167" href="/govuk/assets/images/govuk-apple-touch-icon-167x167.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="/govuk/assets/images/govuk-apple-touch-icon-152x152.png">
-      <link rel="apple-touch-icon" href="/govuk/assets/images/govuk-apple-touch-icon.png">
-
-
-
-  <!--[if lte IE 8]><link href="/public/stylesheets/application-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
-<!--[if gt IE 8]><!--><link href="/public/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" /><!--<![endif]-->
-
-
-
-
-
-
-    <meta property="og:image" content="/govuk/assets/images/govuk-opengraph-image.png">
+  <meta property="og:image" content="/govuk/assets/images/govuk-opengraph-image.png">
   </head>
   <body class="govuk-template__body ">
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
-
-
       <a href="#main-content" class="govuk-skip-link">Skip to main content</a>
 
-
-
-
-
-
-
-
-
-
-
-
-<header class="govuk-header dwp-header" data-module="govuk-header">
-  <div class="govuk-header__container govuk-width-container">
-    <div class="govuk-header__logo" style="width: 50%">
-      <a href="/index" class="govuk-header__link govuk-header__link--homepage">
+  <header class="govuk-header " role="banner" data-module="govuk-header">
+    <div class="govuk-header__container govuk-width-container">
+      <div class="govuk-header__logo" style="width: 50%">
+        <a href="/index" class="govuk-header__link govuk-header__link--homepage">
           <span class="govuk-header__logotype-text">
             Health Assessment Service
           </span>
-      </a>
+        </a>
+      </div>
     </div>
-    <!-- <div class="govuk-header__content">
-      <a href="#" class="govuk-header__link govuk-header__linkservice-name">
-        Service name
-      </a>
-    </div> -->
-  </div>
-</header>
+  </header>
 
-      <div class="govuk-width-container ">
+<div class="govuk-width-container ">
 
-        <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+  <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
 
-  <div class="govuk-grid-row">
+    <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
 
       {% set mainClasses = "govuk-main-wrapper--l" %}
 
       {% block content %}
 
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
-          <h1 class="govuk-heading-l">Book, view and cancel appointments</h1>
-          <span class="govuk-caption-xl">Running on v12.2.0 of the gov.uk prototype kit</span>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-l">Book, view and cancel appointments</h1>
+        <span class="govuk-caption-xl">Running on v12.3.0 of the gov.uk prototype kit</span>
 
-  <!--<p>No appointments exist in service.</p>
+      <br>
+      <br>
 
-      <table class="govuk-table">
-
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-        <th class="govuk-table__header" scope="col">User journeys</th>
-        <th class="govuk-table__header" scope="col"></th>
-        <th class="govuk-table__header" scope="col">Working assumptions</th>
-        </tr>
-        </thead>
-
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header"><p>Book telephone assessment appointment (PIP)</p></th>
-            <td class="govuk-table__cell">
-              <ul class="govuk-list">
-                <li><a href="pip-ta/claimant-detail">Appointment booker</a></li>
-              </ul>
-            </td>
-            <td class="govuk-table__cell">
-              <ul class="govuk-list">
-                <li>All 'appointment booking' happens from the claimant details screen in HAS. How users get to that point is out of scope for now (Understand caseload status, filtering and find are being worked upon.)</li>
-                <li>If 'benefit type' is 'pulled' from one source of truth (currently PAT team entry and used by Chaffinsh) we will remove need to ask 'app booker' to add this saving time and error.</li>
-                <li>If we split the TA and F2F assessment booking into 2 flows determined by the HCP at initial review, we can share resource across sites for TAs improving efficiency and use of available trained assessors.</li>
-                <li>When an HCP reviews a case and determines if a PBR, TA or F2F we can record that as a status to ensure 'app booker' 'books' correctly trained and available HCP and decisions on assessment type are always taken by the HCP at initial review as per policy intent?</li>
-                <li>Allows appointment booker to book with claimant on the phone as all information needed is in one view.</li>
-            </ul></td>
-          </tr>
-
-
+    <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+              Dev baseline
+            </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+          <p class='govuk-body'>This is where the dev baseline lives, it won't change often.</p>
+        </div>
+      </div>
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+              Usability prototype
+            </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+        <p class='govuk-body'>Each sprint there will be a new version pushed with any iterations. You can look through past sprints, and there is also an experimental section where we can try out design ideas.</p>
+          <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m">Version history for current team</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Version</th>
+                <th scope="col" class="govuk-table__header">Date added</th>
+                <th scope="col" class="govuk-table__header govuk-!-width-two-thirds">Change log</th>
+                <th scope="col" class="govuk-table__header">Link</th>
+              </tr>
+            </thead>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header"><p>Book face to face assessment appointment (UC/WCA)</p></th>
+                <th scope="row" class="govuk-table__header">v0.0</th>
+                <td class="govuk-table__cell"></td>
                 <td class="govuk-table__cell">
-                  <ul class="govuk-list">
-                    <li><a href="uc-f2f/claimant-detail">Appointment booker</a></li>
+                <p class="govuk-body"><strong>Experimental area for current sprint</strong></p>
+                </td>
+                <td class="govuk-table__cell"><a href="current/index">Current sprint</a></td>
+              </tr>
+
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">v0.0</th>
+                <td class="govuk-table__cell">7 December 2022</td>
+                <td class="govuk-table__cell">
+                  <p class="govuk-body"><strong>Findings:</strong></p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li><a href="https://app.mural.co/t/dwpdigital7412/m/dwpdigital7412/1666781239869/c4457722818b140671bd546ff964a9ac1af45ebc?sender=u64b697cb6192331359324071">Mural board</a></li>
+                    <li><a href="https://dwpdigital.atlassian.net/wiki/spaces/HPDU/pages/133088772743/UT+15+11+2022+-+16+11+2022+Appointment+Booking+Prototype">Confluence write up</a></li>
+                  </ul>
+                  <p class="govuk-body"><strong>Changes:</strong></p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Booking flow updates:</li>
+                    <ol class="govuk-list govuk-list--number">
+                      <li>Interpreter language page changed to text input instead of select (aka dropdown)</li>
+                      <li>‘What’s your name’ question changed to ‘what is CM’s name’ following UR</li>
+                      <li>‘What’s the claimant’s phone number’ screen updated to have dynamic content to read as ‘What’s the appointee’s phone number’ if the claimant has an appointee</li>
+                      <li>Update to UCB marker screens</li>
+                    </ol>
+                  </ul>
+                  <p class="govuk-body"><strong>Jira tickets:</strong></p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-306">PRRT-306</a></li>
+                    <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-486">PRRT-486</a></li>
+                    <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-487">PRRT-487</a></li>
+                    <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-488">PRRT-488</a></li>
                   </ul>
                 </td>
-                <td class="govuk-table__cell">
-                  <ul class="govuk-list">
-                    <li>Until a 'initial review' journey is explored that may capture this, we will need to rely on the app booker checking the tracker to answer if the assessment requires an HCP qualified in complex neuro.</li>
-                </ul></td>
+                <td class="govuk-table__cell"><a href="sprint-17-18/index">Sprint 17 & 18</a></td>
               </tr>
+              
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">v0.0</th>
+                <td class="govuk-table__cell">8 November 2022</td>
+                <td class="govuk-table__cell">
+                  <p class="govuk-body"><strong>Findings:</strong></p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>UR focus in sprint preparing for next round of usability testing, scheduled week commencing 14 November 2022.</li>
+                  </ul>
+                  <p class="govuk-body"><strong>Changes:</strong></p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Booking journey iterations finalised for testing w/c 14/11</li>
+                    <li>Manage HCPs tile moved up a level to be on HAS homepage instead of within ‘manage assessments’</li>
+                    <li>Edit an existing HCP functionality added. See <a href=https://app.mural.co/t/dwpdigital7412/m/dwpdigital7412/1662396436923/6e8105ff604985a77aa969ac48ce35711864bce4?wid=0-1666187888343>Mural board</a>.</li>
+                    <li>All instances of ‘deactivate’ changed to ‘remove’.</li>
+                    <li>List of most common languages other than English from 2011 census added to interpreter language list to increase fidelity of prototype.</li>
+                  </ul>
+                  <p class="govuk-body"><strong>Jira tickets:</strong></p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-304">PRRT-304</a></li>
+                    <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-445">PRRT-445</a></li>
+                    <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-516">PRRT-516</a></li>
+                    <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-497">PRRT-497</a></li>
+                    <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-306">PRRT-306</a></li>
+                  </ul>
+                </td>
+                <td class="govuk-table__cell"><a href="sprint-16/index">Sprint 16</a></td>
+              </tr>
+
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">v0.0</th>
+                <td class="govuk-table__cell">27 October 2022</td>
+                <td class="govuk-table__cell">
+                  <p class="govuk-body"><strong>Findings:</strong></p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Only Research during sprint was around claimant contact, not yet interpreted into prototype as have dependencies on other teams. <a href="https://app.mural.co/t/dwpdigital7412/m/dwpdigital7412/1665145001396/3d32f2c4550c545c5614956901e03a978ab85822?sender=u64b697cb6192331359324071">Mural board for workshop</a>.</li>
+                  </ul>
+                  <p class="govuk-body"><strong>Changes:</strong></p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Prototype toolkit updated to v12.2.0</li>
+                    <li>Updates to booking journey pages:</li>
+                    <ol class="govuk-list govuk-list--number">
+                      <li>Claimant UCB marker</li>
+                      <li>Does the claimant have somebody coming to support</li>
+                    </ol>
+                    <li>Select appointment date and time experimental designs added for testing</li>
+                  </ul>
+                  <p class="govuk-body"><strong>Jira tickets:</strong></p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li><a href="* https://dwpdigital.atlassian.net/browse/PRRT-304">PRRT-304</a></li>
+                  </ul>
+                </td>
+                <td class="govuk-table__cell"><a href="sprint-15/index">Sprint 15</a></td>
+              </tr>
+
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">v0.0</th>
+                <td class="govuk-table__cell">13 October 2022</td>
+                <td class="govuk-table__cell">
+                  <p class="govuk-body"><strong>Findings:</strong></p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li><a href="https://dwpdigital.atlassian.net/wiki/spaces/HPDU/pages/132979327054/MVP+01+09+2022+-+08+09+2022+Usability+Test">UR findings</a></li>
+                  </ul>
+                  <p class="govuk-body"><strong>Changes:</strong></p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>To booking journey, pages/questions added for:</li>
+                    <ol class="govuk-list govuk-list--number">
+                      <li>Claimant UCB marker</li>
+                      <li>Does the claimant have somebody coming to support</li>
+                      <li>Claimant phone number</li>
+                      <li>Case manager name</li>
+                    </ol>
+                    <li>HCP Admin content tweaks</li>
+                  </ul>
+                  <p class="govuk-body"><strong>Jira tickets:</strong></p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-292">PRRT-292</a></li>
+                    <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-487">PRRT-487</a></li>
+                    <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-488">PRRT-488</a></li>
+                    <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-468">PRRT-468</a></li>
+                    <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-469">PRRT-469</a></li>
+                  </ul>
+                </td>
+                <td class="govuk-table__cell"><a href="sprint-14/index">Sprint 14</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">v0.0</th>
+                <td class="govuk-table__cell">6 October 2022</td>
+                <td class="govuk-table__cell">
+                  <p class="govuk-body"><strong>Findings:</strong></p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li><a href="https://dwpdigital.atlassian.net/wiki/spaces/HPDU/pages/132980441127/UT+12+09+2022+-+13+09+2022+HCP+Admin+Prototype">UR findings</a></li>
+                  </ul>
+                  <p class="govuk-body"><strong>Changes:</strong></p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Content updates to HCP admin journey based on UR findings</li>
+                    <li>On 'add HCP' page, skills matrix reformatted to align with findings of card sorting exercise with users</li>
+                    <li>Check your answers for HCP admin journey reformatted to adhere to accessibility standards</li>
+                  </ul>
+                  <p class="govuk-body"><strong>Jira tickets:</strong></p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li><a href="">Tickets (pending)</a></li>
+                  </ul>
+                </td>
+                <td class="govuk-table__cell"><a href="sprint-13/index">Sprint 13</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">v0.0</th>
+                <td class="govuk-table__cell">13 September 2022</td>
+                <td class="govuk-table__cell">
+                  <p class="govuk-body"><strong>Findings:</strong></p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li><a href="https://dwpdigital.atlassian.net/wiki/spaces/HPDU/pages/132980441127/UT+12+09+2022+-+13+09+2022+HCP+Admin+Prototype">UR findings</a></li>
+                  </ul>
+                  <p class="govuk-body"><strong>Changes:</strong></p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Additional info screen moved to after choose date and time</li>
+                    <li>HCP admin now has location question up front to manage HCPs by location</li>
+                    <li>General HCP admin updates taken to testing based on Content Design review conducted 9/9/22. <a href="https://app.mural.co/t/dwpdigital7412/m/dwpdigital7412/1662396436923/6e8105ff604985a77aa969ac48ce35711864bce4?sender=u64b697cb6192331359324071">See mural board</a>.</li>
+                  </ul>
+                  <p class="govuk-body"><strong>Jira tickets:</strong></p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-355">PRRT-355</a></li>
+                    <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-378">PRRT-378</a></li>
+                    <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-423">PRRT-423</a></li>
+                  </ul>
+                </td>
+                <td class="govuk-table__cell"><a href="sprint-12/index">Sprint 12</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">v0.0</th>
+                <td class="govuk-table__cell">30 August 2022</td>
+                <td class="govuk-table__cell">
+                  <p class="govuk-body"><strong>Findings:</strong></p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li><a href="https://dwpdigital.atlassian.net/wiki/spaces/HPDU/pages/132926964414/MVP+11+08+2022+-+Appointment+Booking+Tool">UR findings</a></li>
+                  </ul>
+                  <p class="govuk-body"><strong>Changes:</strong></p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Structure of prototype revised, now including version control</li>
+                    <li>Functionality of prototype revisited, now includes logic to support question branching and to pull through answers to check your answers</li>
+                    <li>What is the assessment channel page added back into prototype, but updated from green button selection screen to radio select</li>
+                    <li>Select interpreter language page added</li>
+                    <li>Timeslots on date and time changed to align with HCP rota</li>
+                    <li>Cancel confirmation screen added</li>
+                    <li>‘HCP admin’ journey added</li>
+                  </ul>
+                  <p class="govuk-body"><strong>Jira tickets:</strong></p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-386">PRRT-386</a></li>
+                    <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-387">PRRT-387</a></li>
+                    <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-393">PRRT-393</a></li>
+                    <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-389">PRRT-389</a></li>
+                    <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-391">PRRT-391</a></li>
+                    <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-392">PRRT-392</a></li>
+                    <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-354">PRRT-354</a></li>
+                    <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-364">PRRT-364</a></li>
+                  </ul>
+                </td>
+                <td class="govuk-table__cell"><a href="sprint-11/index">Sprint 11</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">v0.0</th>
+                <td class="govuk-table__cell">17 August 2022</td>
+                <td class="govuk-table__cell">
+                  <p class="govuk-body"><strong>Findings:</strong></p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Finding 1</li>
+                    <li>Finding 2</li>
+                    <li>Finding 3</li>
+                  </ul>
+                  <p class="govuk-body"><strong>Changes:</strong></p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Change 1</li>
+                    <li>Change 2</li>
+                    <li>Change 3</li>
+                  </ul>
+                  <p class="govuk-body"><strong>Jira tickets:</strong></p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Ticket 1</li>
+                    <li>Ticket 2</li>
+                    <li>Ticket 3</li>
+                  </ul>
+                </td>
+                <td class="govuk-table__cell"><a href="sprint-10/sprint-10-index">Sprint 10</a></td>
+              </tr>
+            </tbody>
           </table>
+        </div>
+      </div>
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+              Related content
+            </span>
+          </h2>
 
-          <br><br><br>
-          <p>Appointments exist in service.</p>
+        </div>
+        <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+          <h3 class="govuk-heading-s">Resources</h3>
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <a href="https://dwpdigital.atlassian.net/wiki/spaces/HPDU/pages/132782063771/TP+-+UCD" target="_blank">
+                User insight and needs
+              </a>
+            </li>
+            <li>
+              <a href="https://miro.com/app/board/uXjVO4mWNdw=/" target="_blank">
+                Personas
+              </a>
+            </li>
+          </ul>
+          <h3 class="govuk-heading-s">Design assets</h3>
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <a target=”_blank” href="https://miro.com/app/board/uXjVOua5syw=/">Miro board</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-          <table class="govuk-table">
-
-
-
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="col">User journeys</th>
-            <th class="govuk-table__header" scope="col"></th>
-            <th class="govuk-table__header" scope="col">Working assumptions</th>
-            </tr>
-            </thead>
-
-
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header"><p>Assign HCPs</p></th>-->
-              <!-- <th scope="row" class="govuk-table__header"><p>View existing appointment/s (without HCP assigned)</p></th> -->
-              <!--<td class="govuk-table__cell">
-                <ul class="govuk-list">
-                  <li><a href="pip-ta/claimant-detail-assign-hcp">Resource manager</a></li>
-                </ul>
-              </td>
-              <td class="govuk-table__cell">
-                <ul class="govuk-list">
-                  <li>Assumption - Resource managers can navigate to an existing screen (Chaffinich?) that shows all 'booked assessments' and from there can view and assign.</li>
-                  <li>Assumption - there is a wider need for anyone in HAS to be able to view if an assessment exists regardless of workflow status.</li>
-              </ul></td>
-            </tr>
-
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header"><p>View, cancel, delete, change existing appointment/s</p></th>
-              <td class="govuk-table__cell">
-                <ul class="govuk-list">
-                  <li><a href="pip-ta/claimant-detail-start-assessment">Resource manager and anyone in HAS</a></li>
-                </ul>
-              </td>
-              <td class="govuk-table__cell">
-                <ul class="govuk-list">
-                  <li>Assumption - there is an existing process to view 'assessment booked' and 'start assessment' as a list view for resource managers. Do they need to toggle between views as per HB tab design or could they simply open 2 browser windows if needed for MVP until we understand more?</li>
-              </ul></td>
-            </tr> -->
-
-            <!-- <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header"><p>View existing appointment/s (with HCP assigned)</p></th>
-              <td class="govuk-table__cell">
-                <ul class="govuk-list">
-                  <li><a href="pip-ta/claimant-detail-start-assessment">Healthcare professionals</a></li>
-                </ul>
-              </td>
-              <td class="govuk-table__cell">
-                <ul class="govuk-list">
-                  <li>Assumption - there is an existing process to view 'assessment booked' and 'start assessment' as a list view for resource managers. Do they need to toggle between views as per HB tab design or could they simply open 2 browser windows if needed for MVP until we understand more?</li>
-              </ul></td>
-            </tr>
-
-
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header"><p>Change an appointment time and/or date<p/></th>
-            <td class="govuk-table__cell">
-              <ul class="govuk-list">
-                <li><a href="">Appointment booker</a></li>
-              </ul>
-            </td>
-            <td class="govuk-table__cell">
-              <ul class="govuk-list">
-                <li>Assumption - 'Appointment bookers' also receive contact (calls, emails, letters) from citizens (after they have recieved appointment confirmation) and need to change or cancel the time and/or date.</li>
-                <li>Assumption - We can make cancel and rebook a seamless task (MVP contraint - No change functionality, process is to cancel and rebook)</li>
-            </ul></td>
-          </tr>
-
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header"><p>Cancel an appointment<p/></th>
-            <td class="govuk-table__cell">
-              <ul class="govuk-list">
-                <li><a href="">Appointment booker</a></li>
-              </ul>
-            </td>
-            <td class="govuk-table__cell">
-              <ul class="govuk-list">
-                <li>Assumption - Scenarios exist where an appointment is cancelled with no further actions to be taken. No rebooking needed. Is this a valid scenario? Does the whole claim including benefit cease? In that case who do we need to record or notify with and what do they need to close the claim?</li>
-            </ul></td>
-          </tr>
-
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header"><p>Book a second appointment for another claim</p></th>
-            <td class="govuk-table__cell">
-              <ul class="govuk-list">
-                <li><a href="">Appointment booker</a></li>
-              </ul>
-            </td>
-            <td class="govuk-table__cell">
-              <ul class="govuk-list">
-                <li>Assumption - we need to prevent 'double booking'</li>
-                <li>Assumption - a citizen may have a PIP and WCA claim at the same time. These need to remain as 2 seperate HAS 'appointments'.</li>
-                <li>Assumption - allowing a max of 2 appointments to be booked and only if they are for different benefit lines will reduce the 'double booking' issue.</li>
-                <li>Assumption - test design where by an existing appointent is always cancelled before another is booked (start of change/amend journey above)</li>
-            </ul></td>
-          </tr> -->
-
-          <!--<tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header"><p>Add request for a same sex HCP and/or interpreter</p></th>
-            <td class="govuk-table__cell">
-              <ul class="govuk-list">
-                <li><a href="">Appointment booker</a></li>
-              </ul>
-            </td>
-            <td class="govuk-table__cell">
-              <ul class="govuk-list">
-                <li>Scenario - citizen is happy with time and date of appointment, but having recieved letter contacts HAS to request a same sex HCP and/or interpreter.</li>
-                <li>What other reasonable adjustments might need to be captured?</li>
-                <li>Assumption - Capturing this information in HAS is useful</li>
-            </ul></td>
-          </tr>
-
-
-
-        </table>
-          <br><br><br>-->
 <br>
 <br>
 
-<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
-  <div class="govuk-accordion__section ">
-    <div class="govuk-accordion__section-header">
-      <h2 class="govuk-accordion__section-heading">
-        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-          Dev baseline
-        </span>
-      </h2>
-    </div>
-    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-      <p class='govuk-body'>This is where the dev baseline lives, it won't change often.</p>
-    </div>
-  </div>
-  <div class="govuk-accordion__section ">
-    <div class="govuk-accordion__section-header">
-      <h2 class="govuk-accordion__section-heading">
-        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
-          Usability prototype
-        </span>
-      </h2>
-    </div>
-    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
-    <p class='govuk-body'>Each sprint there will be a new version pushed with any iterations. You can look through past sprints, and there is also an experimental section where we can try out design ideas.</p>
-      <table class="govuk-table">
-        <caption class="govuk-table__caption govuk-table__caption--m">Version history for current team</caption>
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header">Version</th>
-            <th scope="col" class="govuk-table__header">Date added</th>
-            <th scope="col" class="govuk-table__header govuk-!-width-two-thirds">Change log</th>
-            <th scope="col" class="govuk-table__header">Link</th>
-          </tr>
-        </thead>
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">v0.0</th>
-            <td class="govuk-table__cell"></td>
-            <td class="govuk-table__cell">
-            <p class="govuk-body"><strong>Experimental area for current sprint</strong></p>
-            </td>
-            <td class="govuk-table__cell"><a href="current/index">Current sprint</a></td>
-          </tr>
-          
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">v0.0</th>
-            <td class="govuk-table__cell">8 November 2022</td>
-            <td class="govuk-table__cell">
-              <p class="govuk-body"><strong>Findings:</strong></p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li>UR focus in sprint preparing for next round of usability testing, scheduled week commencing 14 November 2022.</li>
-              </ul>
-              <p class="govuk-body"><strong>Changes:</strong></p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li>Booking journey iterations finalised for testing w/c 14/11</li>
-                <li>Manage HCPs tile moved up a level to be on HAS homepage instead of within ‘manage assessments’</li>
-                <li>Edit an existing HCP functionality added. See <a href=https://app.mural.co/t/dwpdigital7412/m/dwpdigital7412/1662396436923/6e8105ff604985a77aa969ac48ce35711864bce4?wid=0-1666187888343>Mural board</a>.</li>
-                <li>All instances of ‘deactivate’ changed to ‘remove’.</li>
-                <li>List of most common languages other than English from 2011 census added to interpreter language list to increase fidelity of prototype.</li>
-              </ul>
-              <p class="govuk-body"><strong>Jira tickets:</strong></p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-304">PRRT-304</a></li>
-                <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-445">PRRT-445</a></li>
-                <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-516">PRRT-516</a></li>
-                <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-497">PRRT-497</a></li>
-                <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-306">PRRT-306</a></li>
-              </ul>
-            </td>
-            <td class="govuk-table__cell"><a href="sprint-16/index">Sprint 16</a></td>
-          </tr>
+    {% endblock %}
 
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">v0.0</th>
-            <td class="govuk-table__cell">27 October 2022</td>
-            <td class="govuk-table__cell">
-              <p class="govuk-body"><strong>Findings:</strong></p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li>Only Research during sprint was around claimant contact, not yet interpreted into prototype as have dependencies on other teams. <a href="https://app.mural.co/t/dwpdigital7412/m/dwpdigital7412/1665145001396/3d32f2c4550c545c5614956901e03a978ab85822?sender=u64b697cb6192331359324071">Mural board for workshop</a>.</li>
-              </ul>
-              <p class="govuk-body"><strong>Changes:</strong></p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li>Prototype toolkit updated to v12.2.0</li>
-                <li>Updates to booking journey pages:</li>
-                <ol class="govuk-list govuk-list--number">
-                  <li>Claimant UCB marker</li>
-                  <li>Does the claimant have somebody coming to support</li>
-                </ol>
-                <li>Select appointment date and time experimental designs added for testing</li>
-              </ul>
-              <p class="govuk-body"><strong>Jira tickets:</strong></p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li><a href="* https://dwpdigital.atlassian.net/browse/PRRT-304">PRRT-304</a></li>
-              </ul>
-            </td>
-            <td class="govuk-table__cell"><a href="sprint-15/index">Sprint 15</a></td>
-          </tr>
-
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">v0.0</th>
-            <td class="govuk-table__cell">13 October 2022</td>
-            <td class="govuk-table__cell">
-              <p class="govuk-body"><strong>Findings:</strong></p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li><a href="https://dwpdigital.atlassian.net/wiki/spaces/HPDU/pages/132979327054/MVP+01+09+2022+-+08+09+2022+Usability+Test">UR findings</a></li>
-              </ul>
-              <p class="govuk-body"><strong>Changes:</strong></p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li>To booking journey, pages/questions added for:</li>
-                <ol class="govuk-list govuk-list--number">
-                  <li>Claimant UCB marker</li>
-                  <li>Does the claimant have somebody coming to support</li>
-                  <li>Claimant phone number</li>
-                  <li>Case manager name</li>
-                </ol>
-                <li>HCP Admin content tweaks</li>
-              </ul>
-              <p class="govuk-body"><strong>Jira tickets:</strong></p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-292">PRRT-292</a></li>
-                <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-487">PRRT-487</a></li>
-                <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-488">PRRT-488</a></li>
-                <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-468">PRRT-468</a></li>
-                <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-469">PRRT-469</a></li>
-              </ul>
-            </td>
-            <td class="govuk-table__cell"><a href="sprint-14/index">Sprint 14</a></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">v0.0</th>
-            <td class="govuk-table__cell">6 October 2022</td>
-            <td class="govuk-table__cell">
-              <p class="govuk-body"><strong>Findings:</strong></p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li><a href="https://dwpdigital.atlassian.net/wiki/spaces/HPDU/pages/132980441127/UT+12+09+2022+-+13+09+2022+HCP+Admin+Prototype">UR findings</a></li>
-              </ul>
-              <p class="govuk-body"><strong>Changes:</strong></p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li>Content updates to HCP admin journey based on UR findings</li>
-                <li>On 'add HCP' page, skills matrix reformatted to align with findings of card sorting exercise with users</li>
-                <li>Check your answers for HCP admin journey reformatted to adhere to accessibility standards</li>
-              </ul>
-              <p class="govuk-body"><strong>Jira tickets:</strong></p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li><a href="">Tickets (pending)</a></li>
-              </ul>
-            </td>
-            <td class="govuk-table__cell"><a href="sprint-13/index">Sprint 13</a></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">v0.0</th>
-            <td class="govuk-table__cell">13 September 2022</td>
-            <td class="govuk-table__cell">
-              <p class="govuk-body"><strong>Findings:</strong></p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li><a href="https://dwpdigital.atlassian.net/wiki/spaces/HPDU/pages/132980441127/UT+12+09+2022+-+13+09+2022+HCP+Admin+Prototype">UR findings</a></li>
-              </ul>
-              <p class="govuk-body"><strong>Changes:</strong></p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li>Additional info screen moved to after choose date and time</li>
-                <li>HCP admin now has location question up front to manage HCPs by location</li>
-                <li>General HCP admin updates taken to testing based on Content Design review conducted 9/9/22. <a href="https://app.mural.co/t/dwpdigital7412/m/dwpdigital7412/1662396436923/6e8105ff604985a77aa969ac48ce35711864bce4?sender=u64b697cb6192331359324071">See mural board</a>.</li>
-              </ul>
-              <p class="govuk-body"><strong>Jira tickets:</strong></p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-355">PRRT-355</a></li>
-                <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-378">PRRT-378</a></li>
-                <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-423">PRRT-423</a></li>
-              </ul>
-            </td>
-            <td class="govuk-table__cell"><a href="sprint-12/index">Sprint 12</a></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">v0.0</th>
-            <td class="govuk-table__cell">30 August 2022</td>
-            <td class="govuk-table__cell">
-              <p class="govuk-body"><strong>Findings:</strong></p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li><a href="https://dwpdigital.atlassian.net/wiki/spaces/HPDU/pages/132926964414/MVP+11+08+2022+-+Appointment+Booking+Tool">UR findings</a></li>
-              </ul>
-              <p class="govuk-body"><strong>Changes:</strong></p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li>Structure of prototype revised, now including version control</li>
-                <li>Functionality of prototype revisited, now includes logic to support question branching and to pull through answers to check your answers</li>
-                <li>What is the assessment channel page added back into prototype, but updated from green button selection screen to radio select</li>
-                <li>Select interpreter language page added</li>
-                <li>Timeslots on date and time changed to align with HCP rota</li>
-                <li>Cancel confirmation screen added</li>
-                <li>‘HCP admin’ journey added</li>
-              </ul>
-              <p class="govuk-body"><strong>Jira tickets:</strong></p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-386">PRRT-386</a></li>
-                <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-387">PRRT-387</a></li>
-                <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-393">PRRT-393</a></li>
-                <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-389">PRRT-389</a></li>
-                <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-391">PRRT-391</a></li>
-                <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-392">PRRT-392</a></li>
-                <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-354">PRRT-354</a></li>
-                <li><a href="https://dwpdigital.atlassian.net/browse/PRRT-364">PRRT-364</a></li>
-              </ul>
-            </td>
-            <td class="govuk-table__cell"><a href="sprint-11/index">Sprint 11</a></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">v0.0</th>
-            <td class="govuk-table__cell">17 August 2022</td>
-            <td class="govuk-table__cell">
-              <p class="govuk-body"><strong>Findings:</strong></p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li>Finding 1</li>
-                <li>Finding 2</li>
-                <li>Finding 3</li>
-              </ul>
-              <p class="govuk-body"><strong>Changes:</strong></p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li>Change 1</li>
-                <li>Change 2</li>
-                <li>Change 3</li>
-              </ul>
-              <p class="govuk-body"><strong>Jira tickets:</strong></p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li>Ticket 1</li>
-                <li>Ticket 2</li>
-                <li>Ticket 3</li>
-              </ul>
-            </td>
-            <td class="govuk-table__cell"><a href="sprint-10/sprint-10-index">Sprint 10</a></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <div class="govuk-accordion__section ">
-    <div class="govuk-accordion__section-header">
-      <h2 class="govuk-accordion__section-heading">
-        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
-          Related content
-        </span>
-      </h2>
-
-    </div>
-    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
-      <h3 class="govuk-heading-s">Resources</h3>
-      <ul class="govuk-list govuk-!-font-size-16">
-        <li>
-          <a href="https://dwpdigital.atlassian.net/wiki/spaces/HPDU/pages/132782063771/TP+-+UCD" target="_blank">
-            User insight and needs
-          </a>
-        </li>
-        <li>
-          <a href="https://miro.com/app/board/uXjVO4mWNdw=/" target="_blank">
-            Personas
-          </a>
-        </li>
-      </ul>
-      <h3 class="govuk-heading-s">Design assets</h3>
-      <ul class="govuk-list govuk-!-font-size-16">
-        <li>
-          <a target=”_blank” href="https://miro.com/app/board/uXjVOua5syw=/">Miro board</a>
-        </li>
-      </ul>
-    </div>
-  </div>
+  </main>
 </div>
 
-<br>
-<br>
-
-      {% endblock %}
-
-
-    </div>
-  </div>
-
-        </main>
-      </div>
-
-    <footer class="govuk-footer " role="contentinfo">
-  <div class="govuk-width-container ">
-
-    <div class="govuk-footer__meta">
-      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
-
+  <footer class="govuk-footer " role="contentinfo">
+    <div class="govuk-width-container ">
+      <div class="govuk-footer__meta">
+        <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
           <h2 class="govuk-visually-hidden">Support links</h2>
+          <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="https://govuk-prototype-kit.herokuapp.com/">
+                GOV.UK Prototype Kit v9.10.1
+              </a>
+            </li>
 
-            <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="/prototype-admin/clear-data">
+                Clear data
+              </a>
+            </li>
+          </ul>
 
-                <li class="govuk-footer__inline-list-item">
-                  <a class="govuk-footer__link" href="https://govuk-prototype-kit.herokuapp.com/">
-                    GOV.UK Prototype Kit v9.10.1
-                  </a>
-                </li>
-
-                <li class="govuk-footer__inline-list-item">
-                  <a class="govuk-footer__link" href="/prototype-admin/clear-data">
-                    Clear data
-                  </a>
-                </li>
-
-            </ul>
-
-
-
-        <svg
-          aria-hidden="true"
-          focusable="false"
-          class="govuk-footer__licence-logo"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 483.2 195.7"
-          height="17"
-          width="41"
-        >
-          <path
-            fill="currentColor"
-            d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
-          />
-        </svg>
-        <span class="govuk-footer__licence-description">
-          All content is available under the
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            class="govuk-footer__licence-logo"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 483.2 195.7"
+            height="17"
+            width="41"
+          >
+            <path
+              fill="currentColor"
+              d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+            />
+          </svg>
+          <span class="govuk-footer__licence-description">
+            All content is available under the
+            <a
+              class="govuk-footer__link"
+              href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+              rel="license"
+            >Open Government Licence v3.0</a>, except where otherwise stated
+          </span>
+        </div>
+        <div class="govuk-footer__meta-item">
           <a
-            class="govuk-footer__link"
-            href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
-            rel="license"
-          >Open Government Licence v3.0</a>, except where otherwise stated
-        </span>
-      </div>
-      <div class="govuk-footer__meta-item">
-        <a
-          class="govuk-footer__link govuk-footer__copyright-logo"
-          href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
-        >© Crown copyright</a>
+            class="govuk-footer__link govuk-footer__copyright-logo"
+            href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+          >© Crown copyright</a>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
     <!-- Javascript -->
 <script src="/public/javascripts/jquery-1.11.3.js"></script>

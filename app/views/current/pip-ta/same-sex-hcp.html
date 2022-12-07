@@ -244,24 +244,30 @@ max-width:1160px !important;}
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
   {{ govukRadios({
-    classes: "govuk-radios--inline",
     idPrefix: "same-sex-hcp",
     name: "same-sex-hcp",
     fieldset: {
       legend: {
-        text: "Does the claimant need the same sex healthcare professional?",
+        text: "Does the claimant need a male or female HCP?",
         isPageHeading: true,
         classes: "govuk-fieldset__legend--l"
       }
     },
+    hint: {
+      text: "This could be due to the claimant's request on cultural or religious grounds or due to safeguarding issues."
+    },
     items: [
       {
-        value: "Yes",
-        text: "Yes"
+        value: "Male",
+        text: "Male"
       },
       {
-        value: "No",
-        text: "No"
+        value: "Female",
+        text: "Female"
+      },
+      {
+        value: "No preference",
+        text: "No preference"
       }
     ]
   }) }}
